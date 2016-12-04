@@ -4,7 +4,6 @@
 
 @section('head')
   <link rel="stylesheet" type="text/css" href="{{asset('css/font-awesome.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('css/side.css')}}">
   <link rel="stylesheet" type="text/css" href="/css/parsley.css">
 @endsection
 @section('content')

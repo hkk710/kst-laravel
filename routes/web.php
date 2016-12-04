@@ -44,6 +44,6 @@ Route::post('/online_vazhipad/mojo/pay', 'MojoController@pay');
 Route::get('/online_vazhipad/mojo/thankyou', 'MojoController@thankyou');
 Route::get('/online_vazhipad/mojo/webhook', 'MojoController@webhook');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => ['auth', 'admin']], function () {
+    Route::get('/admin', 'AdminController@index');
+});
