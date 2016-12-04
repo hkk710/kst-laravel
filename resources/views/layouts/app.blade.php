@@ -22,7 +22,7 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-static-top"  style="background-color:#e67300;"">
+    <nav class="navbar navbar-default navbar-static-top"  style="background-color:#e67300;">
         <div class="container">
             <div class="navbar-header">
 
@@ -63,12 +63,7 @@
  Profile</a></li>
                                 <div class="divider"></div>
                                 <li>
-                                    <a href="{{ url('/logout') }}"
-                                        onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();"> <i class="fa fa-sign-out" style="color:#fff" aria-hidden="true"></i>
-
-                                        Logout
-
+                                    <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> <i class="fa fa-sign-out" style="color:#fff" aria-hidden="true"></i>Logout
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
@@ -83,14 +78,10 @@
     <audio hidden id="audio">
         <source src="{{asset('sounds/click.mp3')}}">
     </audio>
-
     @yield('content')
-
-    
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <script type="text/javascript" src="{{asset('js/main.js')}}"></script>
-
 </body>
 </html>

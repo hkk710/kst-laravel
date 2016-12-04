@@ -31,6 +31,7 @@ Route::get('/festivals', 'festivalsController@index');
 Route::get('/facilities', 'facilitiesController@index');
 
 Route::get('/online_vazhipad', 'onlinevazhipadController@index');
+Route::get('/online_vazhipad/ajax', 'onlinevazhipadController@ajax');
 
 Route::get('/gallery1', 'galleryController@Gallery1');
 Route::get('/gallery2', 'galleryController@gallery2');
@@ -42,3 +43,7 @@ Route::get('/online_vazhipad/mojo/order', 'MojoController@order');
 Route::post('/online_vazhipad/mojo/pay', 'MojoController@pay');
 Route::get('/online_vazhipad/mojo/thankyou', 'MojoController@thankyou');
 Route::get('/online_vazhipad/mojo/webhook', 'MojoController@webhook');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

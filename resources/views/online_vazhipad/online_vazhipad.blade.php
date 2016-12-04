@@ -1,5 +1,10 @@
 @extends('main')
+
 @section('title', 'Online Vazhipad')
+
+@section('head')
+	<script src="{{asset('js/vue.min.js')}}"></script>
+@endsection
 
 @section('content')
 
@@ -32,7 +37,7 @@
 										<div class="panel-heading" style="background: #e67300; color: #fff;"><b>Online Vazhipad</b></div>
 										<div class="panel-body">
 											<form action="" method="POST">
-
+												{{csrf_field()}}
 												<div class="col-md-4">
 													<strong>Prathista: </strong>
 												</div>
@@ -49,19 +54,22 @@
 													<strong>Vazhipad Type: </strong>
 												</div>
 
-												<div class="col-md-8 input-group-sm">
-													<select class="form-control" name="category" id="category">
+												<div class="col-md-8 input-group-sm" id="app">
+													<select class="form-control" name="vtype" id="vtype" v-on:change="changeFunction">
+															<option value="0">Select any</option>
+															@foreach ($vtypes as $vtype)
+																<option value="{{$vtype->id}}">{{$vtype->name}}</option>
+															@endforeach
 													</select>
-												</div><br><br>
+											</div><br><br>
 
 												<div class="col-md-4">
 													<strong>Vazhipad Name:</strong>
 												</div>
 													<div class="col-md-8 input-group-sm">
-													<select name="" id="" class="form-control" name="subcategory" id="kst-subcategory">
-
-															<option value="">Add...</option>
-														</select>
+													<select class="form-control" name="vname" id="vname">
+															<option value="0">Select any Vazhipad Type</option>
+													</select>
 												</div><br><br>
 
 												<div class="col-md-4">
@@ -186,6 +194,28 @@
                             {{ csrf_field() }}
                         </form>
 		        	</div>
+							<script>
+									new Vue({
+										el: '#app',
+										methods: {
+											changeFunction: function(e) {
+												if ($('#vtype option:selected').val() == 0) {
+													$('#vname').empty();
+													$('#vname').append('<option value="0">Select any Vazhipad Type</option>');
+												}
+												else {
+													var cat_id = e.target.value;
+													$.get('/online_vazhipad/ajax?cat_id=' + cat_id, function(data) {
+														$('#vname').empty();
+														$.each(data, function(index, subcatObj) {
+															$('#vname').append('<option value="' + subcatObj.id + '">' + subcatObj.name + '</option>');
+														})
+													})
+												}
+											}
+										}
+									})
+							</script>
 
 		        @endif
 @endsection
