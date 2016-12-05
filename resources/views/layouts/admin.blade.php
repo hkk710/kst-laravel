@@ -50,14 +50,30 @@
     <nav class="w3-sidenav w3-collapse w3-white w3-card-2 w3-animate-left" id="mySidenav">
       <a href="javascript:void(0)" onclick="w3_close()"
       class="w3-closenav w3-large w3-hide-large" id="close-btn">Close &times;</a>
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-      <a href="#">Link 4</a>
-      <a href="#">Link 5</a>
+      <a href="{{url('admin/users')}}" class="{{Request::is('admin/users') ? 'w3-grey' : ''}} w3-border w3-margin"><i class="fa fa-users" aria-hidden="true"></i> Users</a>
     </nav>
     <div class="" id="main-div">
-      <div class="container w3-margin w3-padding">
+      <div class="container-fluid w3-margin w3-padding">
+          @if (Session::has('success'))
+
+          	<div class="alert alert-success" role="alert">
+          		<strong>Success: </strong>{{ Session::get('success') }}
+          	</div>
+
+          @endif
+
+          @if (count($errors) > 0)
+
+          	<div class="alert alert-danger" role="alert">
+          		<strong>Error: </strong>
+          		<ul>
+          			@foreach ($errors->all() as $error)
+          				<li>{{$error}}</li>
+          			@endforeach
+          		</ul>
+          	</div>
+
+          @endif
         @yield('content')
       </div>
     </div>

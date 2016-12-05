@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -80,5 +82,41 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    // ============================== Users ===================
+
+    public function userIndex() {
+        $users = User::paginate(15);
+        return view('admin.user.index')->withUsers($users);
+    }
+
+    public function userShow($id) {
+        $user = User::find($id);
+        return view('admin.user.show')->withUser($user);
+    }
+
+    public function userEdit($id) {
+        $user = User::find($id);
+        return view('admin.user.edit')->withUser($user);
+    }
+
+    public function userUpdate(Request $request, $id) {
+        $this->validate($request, [
+            'name'     => 'required|max:255',
+            'email'    => "required|unique:users,email,$id",
+            'password' => 'required|max:255|confirmed'
+        ]);
+
+        $user = User::find($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->admin = $request->admin;
+        $user->save();
+
+        Session::flash('success', 'User have been successfully edited');
+        return redirect()->route('user.show', [$user->id]);
     }
 }
