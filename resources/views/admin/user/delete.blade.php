@@ -1,6 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
+    <h1 class="w3-text-red text-center">Are you sure you want to delete this User?</h1>
+    <hr>
     {!! Form::model($user) !!}
 
         {{ Form::label('name', 'Name:') }}
@@ -13,10 +15,13 @@
         <input type="text" value="{{ $admin = ($user->admin) ? 'True' : 'False' }}" class="form-control w3-margin-bottom" name="admin" id="admin" readonly>
 
     {!! Form::close() !!}
+
     <div class="col-sm-6">
-        <a href="{{ route('user.edit', $user->id) }}" class="btn btn-block btn-warning">Edit</a>
+        <a href="{{ route('user.show', $user->id) }}" class="btn btn-block btn-info">Cancel</a>
     </div>
     <div class="col-sm-6">
-        <a href="{{route('user.delete', $user->id)}}" class="btn btn-block btn-danger">Delete</a>
+        {!! Form::open(['route' => ['user.destroy', $user->id], 'method' => 'DELETE']) !!}
+            {{ Form::submit("Delete", ['class' => ' btn btn-block btn-danger']) }}
+        {!! Form::close() !!}
     </div>
 @endsection

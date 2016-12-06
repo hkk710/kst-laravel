@@ -14,7 +14,7 @@ class AddAdminColumnToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function($table) {
-          $table->boolean('admin')->after('id');
+          $table->boolean('admin')->default(0)->after('id');
         });
         DB::table('users')->insert(
           ['admin' => 1, 'name' => 'Admin', 'email' => 'admin@kst.com', 'password' => bcrypt('krishna')]

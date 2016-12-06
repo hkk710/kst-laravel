@@ -92,6 +92,15 @@ class AdminController extends Controller
         return view('admin.user.index')->withUsers($users);
     }
 
+    public function userSearch(Request $request) {
+        if ($request->search == null || $request->search == "") {
+            $users = User::paginate(15);
+            return view('admin.user.index')->withUsers($users);
+        }
+        $users = User::all()->where('name', '=', $request->search);
+        return view('admin.user.index')->withUsers($users);
+    }
+
     public function userShow($id) {
         $user = User::find($id);
         return view('admin.user.show')->withUser($user);
@@ -118,5 +127,18 @@ class AdminController extends Controller
 
         Session::flash('success', 'User have been successfully edited');
         return redirect()->route('user.show', [$user->id]);
+    }
+
+    public function userDelete($id) {
+        $user = User::find($id);
+        return view('admin.user.delete')->withUser($user);
+    }
+
+    public function userDestroy($id) {
+        $user = User::find($id);
+        $user->delete();
+
+        Session::flash('success', 'The user was successfully deleted');
+        return redirect('/admin/users');
     }
 }
