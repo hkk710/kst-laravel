@@ -87,17 +87,14 @@ class AdminController extends Controller
 
     // ============================== Users ===================
 
-    public function userIndex() {
-        $users = User::paginate(15);
-        return view('admin.user.index')->withUsers($users);
-    }
-
-    public function userSearch(Request $request) {
-        if ($request->search == null || $request->search == "") {
-            $users = User::paginate(15);
-            return view('admin.user.index')->withUsers($users);
+    public function userIndex(Request $request) {
+        if (isset($_GET['search'])) {
+            if ($_GET['search'] != "" || $_GET['search'] != null) {
+                $users = User::all()->where($request->search_by, '=', $request->search);
+                return view('admin.user.index')->withUsers($users);
+            }
         }
-        $users = User::all()->where('name', '=', $request->search);
+        $users = User::paginate(15);
         return view('admin.user.index')->withUsers($users);
     }
 
@@ -115,13 +112,15 @@ class AdminController extends Controller
         $this->validate($request, [
             'name'     => 'required|max:255',
             'email'    => "required|unique:users,email,$id",
-            'password' => 'required|max:255|confirmed'
+            'password' => 'sometimes|max:255|confirmed'
         ]);
 
         $user = User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = bcrypt($request->password);
+        if ($request->password != null || $request->password != "") {
+            $user->password = bcrypt($request->password);
+        }
         $user->admin = $request->admin;
         $user->save();
 

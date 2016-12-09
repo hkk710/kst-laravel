@@ -19,7 +19,7 @@
 }
 body {
 	background:  #e67300;
-    background: -webkit-linear-gradient(#e67300, #fff); 
+    background: -webkit-linear-gradient(#e67300, #fff);
     background: -o-linear-gradient(#e67300, #fff);
     background: -moz-linear-gradient(#e67300, #fff);
     background: linear-gradient(#e67300, #fff);
@@ -90,10 +90,6 @@ ul.templatemo-submenu li:hover a {
 		display: none;
 	}
 }
-
-
-
-
 
 
 
@@ -204,7 +200,7 @@ body {
 	color: #333;
 }
 .a-b:hover, .a-b:focus {
-	
+
 	text-decoration: none;
 	color: #333;
 }
@@ -229,10 +225,6 @@ body {
 	border: 3px solid #fff;
 	box-shadow: 0 0 20px 1px #fff;
 	margin-bottom: 50px;
-}
-.ad-form {
-	padding: 30px!IMportant;
-	margin: 10px;
 }
 textarea {
 	min-width: 100%;

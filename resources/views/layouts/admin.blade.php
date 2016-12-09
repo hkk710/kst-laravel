@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('/css/w3.css')}}">
     <link rel="stylesheet" href="{{asset('/css/font-awesome.css')}}">
     <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+    @yield('head')
   </head>
   <body>
     <nav class="navbar navbar-inverse w3-margin-0">
@@ -50,7 +51,7 @@
     <nav class="w3-sidenav w3-collapse w3-white w3-card-2 w3-animate-left" id="mySidenav">
       <a href="javascript:void(0)" onclick="w3_close()"
       class="w3-closenav w3-large w3-hide-large" id="close-btn">Close &times;</a>
-      <a href="{{url('admin/users')}}" class="{{Request::is('admin/users') ? 'w3-grey' : ''}} w3-border w3-margin"><i class="fa fa-users" aria-hidden="true"></i> Users</a>
+      <a href="{{url('admin/users')}}" class="{{Request::is('admin/users') ? 'w3-grey' : ''}} w3-border w3-margin-top"><i class="fa fa-users" aria-hidden="true"></i> Users</a>
     </nav>
     <div class="" id="main-div">
       <div class="container-fluid w3-margin w3-padding">
@@ -78,12 +79,13 @@
       </div>
     </div>
     <script type="text/javascript">
-    function w3_open() {
-      document.getElementById("mySidenav").style.display = "block";
-    }
-    function w3_close() {
-      document.getElementById("mySidenav").style.display = "none";
-    }
+        function w3_open() {
+          document.getElementById("mySidenav").style.display = "block";
+        }
+        function w3_close() {
+          document.getElementById("mySidenav").style.display = "none";
+        }
     </script>
+    @yield('js')
   </body>
 </html>

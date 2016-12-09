@@ -9,7 +9,7 @@
         {{ Form::label('email', 'Email:') }}
         {{ Form::text('email', null, ['class' => 'form-control w3-margin-bottom']) }}
 
-        {{ Form::label('password', 'Password:') }}
+        {{ Form::label('password', 'Password:') }} <small>(If no need to change password, leave this field blank)</small>
         {{ Form::password('password', ['class' => 'form-control w3-margin-bottom']) }}
 
         {{ Form::label('password_confirmation', 'Confirm Password:') }}
