@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\category;
-use App\subcategory;
+use App\Vname;
+use App\Vtype;
 use Input;
+use Response;
 
 class onlinevazhipadController extends Controller
 {
@@ -18,7 +19,13 @@ class onlinevazhipadController extends Controller
      */
     public function index()
     {
-        return view('online_vazhipad.online_vazhipad');
+        $vtypes = Vtype::all();
+        return view('online_vazhipad.online_vazhipad')->withVtypes($vtypes);
+    }
+    public function ajax(Request $request) {
+      $cat_id = $request->cat_id;
+      $vnames = Vname::where('vtypes_id', '=', $cat_id)->get();
+      return Response::json($vnames);
     }
     /**
      * Show the form for creating a new resource.

@@ -1,1 +1,2 @@
-{{ trans('quickadmin::emails.password-reset_your_password') }} {{ url('password/reset/'.$token) }}
+Click here to reset your password: <br>
+<a href="{{ $link = url('password/reset', $token).'?email='.urlencode($user->getEmailForPasswordReset()) }}">{{$link}}</a>
