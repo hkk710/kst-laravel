@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Session;
+use App\Vtype;
 use App\User;
+use Response;
 
 class AdminController extends Controller
 {
@@ -88,14 +90,14 @@ class AdminController extends Controller
     // ============================== Users ===================
 
     public function userIndex(Request $request) {
-        if (isset($_GET['search'])) {
-            if ($_GET['search'] != "" || $_GET['search'] != null) {
-                $users = User::all()->where($request->search_by, '=', $request->search);
-                return view('admin.user.index')->withUsers($users);
-            }
-        }
         $users = User::paginate(15);
         return view('admin.user.index')->withUsers($users);
+    }
+
+    public function userSearch(Request $request) {
+        $search = $request->search;
+        $users = User::where($request->search_by, '=', $search)->get();
+        return Response::json($users);
     }
 
     public function userShow($id) {
@@ -139,5 +141,70 @@ class AdminController extends Controller
 
         Session::flash('success', 'The user was successfully deleted');
         return redirect('/admin/users');
+    }
+
+
+
+
+    // ======================= Vazhipad types ===================
+
+    public function vtypeIndex(Request $request) {
+        $vtypes = Vtype::paginate(15);
+        return view('admin.vtype.index')->withVtypes($vtypes);
+    }
+
+    public function vtypeSearch(Request $request) {
+        $search = $request->search;
+        $vtypes = Vtype::where($request->search_by, '=', $search)->get();
+        return Response::json($vtypes);
+    }
+
+    public function vtypeCreate() {
+        return view('admin.vtype.create');
+    }
+
+    public function vtypeStore(Request $request) {
+        $vtype = new Vtype;
+        $vtype->name = $request->name;
+
+        $vtype->save();
+        Session::flash('success', 'New Vazhipad Type was successfully created');
+        return redirect()->route('vtype.show', [$vtype->id]);
+    }
+
+    public function vtypeShow($id) {
+        $vtype = Vtype::find($id);
+        return view('admin.vtype.show')->withVtype($vtype);
+    }
+
+    public function vtypeEdit($id) {
+        $vtype = Vtype::find($id);
+        return view('admin.vtype.edit')->withVtype($vtype);
+    }
+
+    public function vtypeUpdate(Request $request, $id) {
+        $this->validate($request, [
+            'name'     => 'required|max:255'
+        ]);
+
+        $vtype = Vtype::find($id);
+        $vtype->name = $request->name;
+        $vtype->save();
+
+        Session::flash('success', 'Vazhipad type have been successfully edited');
+        return redirect()->route('vtype.show', [$vtype->id]);
+    }
+
+    public function vtypeDelete($id) {
+        $vtype = Vtype::find($id);
+        return view('admin.vtype.delete')->withVtype($vtype);
+    }
+
+    public function vtypeDestroy($id) {
+        $vtype = Vtype::find($id);
+        $vtype->delete();
+
+        Session::flash('success', 'The vazhipad type was successfully deleted');
+        return redirect('/admin/vtypes');
     }
 }
