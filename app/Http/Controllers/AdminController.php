@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Session;
 use App\Vtype;
 use App\User;
+use App\Vname;
 use Response;
 
 class AdminController extends Controller
@@ -18,72 +19,6 @@ class AdminController extends Controller
     public function index()
     {
         return view('admin.index');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 
 
@@ -153,17 +88,12 @@ class AdminController extends Controller
         return view('admin.vtype.index')->withVtypes($vtypes);
     }
 
-    public function vtypeSearch(Request $request) {
-        $search = $request->search;
-        $vtypes = Vtype::where($request->search_by, '=', $search)->get();
-        return Response::json($vtypes);
-    }
-
     public function vtypeCreate() {
         return view('admin.vtype.create');
     }
 
     public function vtypeStore(Request $request) {
+        $this->validate($request, ['name' => 'required']);
         $vtype = new Vtype;
         $vtype->name = $request->name;
 
@@ -191,7 +121,7 @@ class AdminController extends Controller
         $vtype->name = $request->name;
         $vtype->save();
 
-        Session::flash('success', 'Vazhipad type have been successfully edited');
+        Session::flash('success', 'Vazhipad type was successfully edited');
         return redirect()->route('vtype.show', [$vtype->id]);
     }
 
@@ -202,9 +132,74 @@ class AdminController extends Controller
 
     public function vtypeDestroy($id) {
         $vtype = Vtype::find($id);
+        $vtype->vname()->delete();
         $vtype->delete();
 
-        Session::flash('success', 'The vazhipad type was successfully deleted');
+        Session::flash('success', 'Vazhipad type was successfully deleted');
         return redirect('/admin/vtypes');
     }
+
+
+
+
+        // ======================= Vazhipad names ===================
+
+        public function vnameIndex(Request $request) {
+            $vnames = Vname::paginate(15);
+            return view('admin.vname.index')->withVnames($vnames);
+        }
+
+        public function vnameCreate() {
+            $vtypes = Vtype::all();
+            return view('admin.vname.create')->withVtypes($vtypes);
+        }
+
+        public function vnameStore(Request $request) {
+            $this->validate($request, ['name' => 'required']);
+            $vname = new Vname;
+            $vname->name = $request->name;
+            $vname->vtypes_id = $request->vtypes_id;
+
+            $vname->save();
+            Session::flash('success', 'New Vazhipad name was successfully created');
+            return redirect()->route('vname.show', [$vname->id]);
+        }
+
+        public function vnameShow($id) {
+            $vname = Vname::find($id);
+            return view('admin.vname.show')->withVname($vname);
+        }
+
+        public function vnameEdit($id) {
+            $vname = Vname::find($id);
+            $vtypes = Vtype::all();
+            return view('admin.vname.edit')->withVname($vname)->withVtypes($vtypes);
+        }
+
+        public function vnameUpdate(Request $request, $id) {
+            $this->validate($request, [
+                'name'     => 'required|max:255'
+            ]);
+
+            $vname = Vname::find($id);
+            $vname->name = $request->name;
+            $vname->vtypes_id = $request->vtypes_id;
+            $vname->save();
+
+            Session::flash('success', 'Vazhipad name was successfully edited');
+            return redirect()->route('vname.show', [$vname->id]);
+        }
+
+        public function vnameDelete($id) {
+            $vname = Vname::find($id);
+            return view('admin.vname.delete')->withVname($vname);
+        }
+
+        public function vnameDestroy($id) {
+            $vname = Vname::find($id);
+            $vname->delete();
+
+            Session::flash('success', 'Vazhipad name was successfully deleted');
+            return redirect('/admin/vnames');
+        }
 }

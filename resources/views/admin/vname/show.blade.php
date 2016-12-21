@@ -1,0 +1,20 @@
+@extends('layouts.admin')
+
+@section('content')
+    {!! Form::model($vname) !!}
+
+        {{ Form::label('name', 'Name:') }}
+        {{ Form::text('name', null, ['class' => 'form-control w3-margin-bottom', 'readonly']) }}
+        {{ Form::label('vtypes_id', 'Vazhipad Type:') }}
+        <a href="{{ route('vtype.show', $vname->vtypes_id) }}">
+            <input type="text" name="vtypes_id" id="vtypes_id" class="form-control w3-margin-bottom" readonly value="{{ $vname->vtypes_id }} ({{ $vname->vtype->name }})">
+        </a>
+
+    {!! Form::close() !!}
+    <div class="col-sm-6">
+        <a href="{{ route('vname.edit', $vname->id) }}" class="btn btn-block btn-warning">Edit</a>
+    </div>
+    <div class="col-sm-6">
+        <a href="{{route('vname.delete', $vname->id)}}" class="btn btn-block btn-danger">Delete</a>
+    </div>
+@endsection

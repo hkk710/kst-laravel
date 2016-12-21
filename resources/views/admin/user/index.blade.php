@@ -83,6 +83,9 @@
                     }
                 }, 400)
             }
+        });
+        $('form').submit(function() {
+            event.preventDefault();
         })
     </script>
 @endsection

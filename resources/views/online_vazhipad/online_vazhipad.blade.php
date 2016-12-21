@@ -169,7 +169,10 @@
 													<strong>Price:</strong>
 												</div>
 													<div class="col-md-8 input-group-sm">
-														<label class="form-control text-center"></label>
+														<div class="input-group">
+														  	<span class="input-group-addon"><b>&#8377;</b></span>
+														  	<label class="form-control"></label>
+														</div>
 													</div><br><br>
 													<div class="col-md-12 text-right">
 														<div class="ad-6">

@@ -55,7 +55,6 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::delete('/admin/users/{id}/destroy', ['uses' => 'AdminController@userDestroy', 'as' => 'user.destroy']);
 
     Route::get('/admin/vtypes', 'AdminController@vtypeIndex');
-    Route::get('/admin/vtypes/search', 'AdminController@vtypeSearch');
     Route::get('/admin/vtypes/create', 'AdminController@vtypeCreate');
     Route::post('/admin/vtypes/create', 'AdminController@vtypeStore');
     Route::get('/admin/vtypes/{id}', ['uses' => 'AdminController@vtypeShow', 'as' => 'vtype.show']);
@@ -63,4 +62,13 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::put('/admin/vtypes/{id}/update', ['uses' => 'AdminController@vtypeUpdate', 'as' => 'vtype.update']);
     Route::get('/admin/vtypes/{id}/delete', ['uses' => 'AdminController@vtypeDelete', 'as' => 'vtype.delete']);
     Route::delete('/admin/vtypes/{id}/destroy', ['uses' => 'AdminController@vtypeDestroy', 'as' => 'vtype.destroy']);
+
+    Route::get('/admin/vnames', 'AdminController@vnameIndex');
+    Route::get('/admin/vnames/create', 'AdminController@vnameCreate');
+    Route::post('/admin/vnames/create', 'AdminController@vnameStore');
+    Route::get('/admin/vnames/{id}', ['uses' => 'AdminController@vnameShow', 'as' => 'vname.show']);
+    Route::get('/admin/vnames/{id}/edit', ['uses' => 'AdminController@vnameEdit', 'as' => 'vname.edit']);
+    Route::put('/admin/vnames/{id}/update', ['uses' => 'AdminController@vnameUpdate', 'as' => 'vname.update']);
+    Route::get('/admin/vnames/{id}/delete', ['uses' => 'AdminController@vnameDelete', 'as' => 'vname.delete']);
+    Route::delete('/admin/vnames/{id}/destroy', ['uses' => 'AdminController@vnameDestroy', 'as' => 'vname.destroy']);
 });
