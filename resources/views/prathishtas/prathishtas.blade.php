@@ -40,21 +40,57 @@
                     </div>
                     <div class="col-sm-6">
                         <h2 style="color:red;" class="text-center"><u>DEVI</u></h2>
+                        <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                            // Here
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div id="f3" class="tab-pane fade">
-        <h2 style="color:red;">NAGAR</h2>
-        <img src="{{asset('images/nagar.jpg')}}" alt="" class="img-flex">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-sm-6">
+                        <img src="{{asset('images/nagar.jpg')}}" style="width: 100%; height: 500px">
+                    </div>
+                    <div class="col-sm-6">
+                        <h2 style="color:red;">NAGAR</h2>
+                        <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                            // Here
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="f4" class="tab-pane fade">
-        <h2 style="color:red;">BRAHMA REKSHASU</h2>
-        <img src="{{asset('images/swa1.jpg')}}" alt="" class="img-flex">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-sm-6">
+                        <img src="{{asset('images/swa1.jpg')}}" style="width: 100%; height: 500px">
+                    </div>
+                    <div class="col-sm-6">
+                        <h2 style="color:red;">BRAHMA REKSHASU</h2>
+                        <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                            // Here
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="f5" class="tab-pane fade">
-        <h2 style="color:red;">REKSHASU</h2>
-        <img src="{{asset('images/nav1.jpg')}}" alt="" class="img-flex">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="col-sm-6">
+                        <img src="{{asset('images/nav1.jpg')}}" style="width: 100%; height: 500px">
+                    </div>
+                    <div class="col-sm-6">
+                        <h2 style="color:red;">REKSHASU</h2>
+                        <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                            // Here
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     </div>
