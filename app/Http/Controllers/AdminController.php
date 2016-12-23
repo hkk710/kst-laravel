@@ -155,10 +155,11 @@ class AdminController extends Controller
         }
 
         public function vnameStore(Request $request) {
-            $this->validate($request, ['name' => 'required']);
+            $this->validate($request, ['name' => 'required', 'price'    => 'required|numeric']);
             $vname = new Vname;
             $vname->name = $request->name;
             $vname->vtypes_id = $request->vtypes_id;
+            $vname->price = $request->price;
 
             $vname->save();
             Session::flash('success', 'New Vazhipad name was successfully created');
@@ -178,12 +179,14 @@ class AdminController extends Controller
 
         public function vnameUpdate(Request $request, $id) {
             $this->validate($request, [
-                'name'     => 'required|max:255'
+                'name'     => 'required|max:255',
+                'price'    => 'required|numeric'
             ]);
 
             $vname = Vname::find($id);
             $vname->name = $request->name;
             $vname->vtypes_id = $request->vtypes_id;
+            $vname->price = $request->price;
             $vname->save();
 
             Session::flash('success', 'Vazhipad name was successfully edited');

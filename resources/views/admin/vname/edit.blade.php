@@ -12,6 +12,11 @@
             @endforeach
         </select>
 
+        <div class="input-group w3-margin-bottom">
+            <span class="input-group-addon"><b>&#8377;</b></span>
+            {{ Form::number('price', null, ['class' => 'form-control']) }}
+        </div>
+
         <div class="col-sm-6">
             <a href="{{ route('vname.show', $vname->id) }}" class="btn btn-block btn-info">Cancel</a>
         </div>

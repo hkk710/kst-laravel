@@ -9,6 +9,11 @@
         <a href="{{ route('vtype.show', $vname->vtypes_id) }}">
             <input type="text" name="vtypes_id" id="vtypes_id" class="form-control w3-margin-bottom" readonly value="{{ $vname->vtypes_id }} ({{ $vname->vtype->name }})">
         </a>
+        {{ Form::label('price', 'Price:') }}
+        <div class="input-group w3-margin-bottom">
+            <span class="input-group-addon"><b>&#8377;</b></span>
+            {{ Form::number('price', null, ['class' => 'form-control', 'readonly']) }}
+        </div>
 
     {!! Form::close() !!}
     <div class="col-sm-6">
