@@ -52,6 +52,8 @@
       <a href="javascript:void(0)" onclick="w3_close()"
       class="w3-closenav w3-large w3-hide-large" id="close-btn">Close &times;</a>
       <a href="{{url('admin/users')}}" class="{{Request::is('admin/users') ? 'w3-grey' : ''}} w3-border w3-margin-top"><i class="fa fa-users" aria-hidden="true"></i> Users</a>
+      <a href="{{url('admin/vtypes')}}" class="{{Request::is('admin/vtypes') ? 'w3-grey' : ''}} w3-border w3-margin-top"><i class="fa fa-keyboard-o" aria-hidden="true"></i> Vazhipad Types</a>
+      <a href="{{url('admin/vnames')}}" class="{{Request::is('admin/vnames') ? 'w3-grey' : ''}} w3-border w3-margin-top"><i class="fa fa-gamepad" aria-hidden="true"></i> Vazhipad Names</a>
     </nav>
     <div class="" id="main-div">
       <div class="container-fluid w3-margin w3-padding">

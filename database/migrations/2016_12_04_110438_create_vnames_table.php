@@ -18,6 +18,7 @@ class CreateVnamesTable extends Migration
             $table->string('name');
             $table->integer('vtypes_id')->unsigned();
             $table->foreign('vtypes_id')->references('id')->on('vtypes');
+            $table->integer('price');
             $table->timestamps();
         });
     }

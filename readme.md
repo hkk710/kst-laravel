@@ -10,7 +10,8 @@ For viewing this html please follow the following instructions:
 - cd to the main folder of the repo
 - Then type `composer install`
 - Then `copy .env.example .env`
-- open the .env file and change the username to root and leave password empty. Rename the database to what ever you want and create a database with that name in [phpmyadmin](http://localhost/phpmyadmin/) or any other
+- Then go to [phpmyadmin](http://localhost/phpmyadmin/) and create a database with name 'kst'
+- Then `php artisan migrate`
 - Then `php artisan key:generate`
 - Type `php artisan serve`
 - Goto [localhost:8000](http://localhost:8000/)
@@ -22,7 +23,9 @@ For viewing this html please follow the following instructions:
 - Type `composer install`
 - Type `chmod -R 777 bootstrap/cache`
 - Type `cp .env.example .env`
-- open the .env file and change the username to root and leave password empty. Rename the database to what ever you want and create a database with that name in [phpmyadmin](http://localhost/phpmyadmin/) or any other
+- open the .env file and change the value of 'DB_PASSWORD' from blank to your linux password
+- Then go to [phpmyadmin](http://localhost/phpmyadmin/) and create a database with name 'kst'
+- Then `php artisan migrate`
 - Type `php artisan key:generate`
 - Type `php artisan serve`
 - Goto [localhost:8000](http://localhost:8000/)
