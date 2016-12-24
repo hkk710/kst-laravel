@@ -100,10 +100,10 @@
 				    <div class="col-md-9 ad-bd ad-pd-0">
 				    		<div class="n-m-b-heading"></div>
                     <div class="ad-pd">
-                        <div class="ad-pd col-md-3">
-                            <img src="{{asset('images/kannan.jpg')}}" class="img-circle">
+                        <div class="col-sm-3 col-md-3 text-center" style="padding-left: 40px; padding-right: 40px; padding-top: 20px;">
+                            <img src="{{asset('images/kannan.jpg')}}" class="img-circle" style="width: 90%;">
                         </div>
-                        <div class="col-md-9" style="color: #4700b3;">
+                        <div class="col-sm-9 col-md-9" style="color: #4700b3;">
                             <div id="change1">
                             <h1 class="text-center"> ശ്രീകൃഷ്ണധ്യാനം</h1>
                             <h4>

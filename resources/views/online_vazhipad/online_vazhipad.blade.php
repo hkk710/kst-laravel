@@ -128,7 +128,7 @@
 								<div class="col-md-8 input-group-sm">
 									<div class="input-group">
 										<span class="input-group-addon"><b>&#8377;</b></span>
-										<label class="form-control" id="price"></label>
+										<label class="form-control" id="price">0</label>
 									</div>
 								</div><br><br>
 								<div class="col-md-12 text-right">
@@ -139,7 +139,7 @@
 									</div>
 									<div class="ad-6">
 										<span>
-											<input type="reset" class="btn btn-danger">
+											<input type="reset" class="btn btn-danger" v-on:click="clearPrice">
 										</span>
 									</div>
 								</div>
@@ -165,18 +165,21 @@
 							var cat_id = e.target.value;
 							$.get('/online_vazhipad/ajax?cat_id=' + cat_id, function(data) {
 								$('#vname').empty();
-								$('#vname').append('<option value="0">Select any</option>')
+								$('#vname').append('<option value="0" price="0">Select any</option>')
 								$.each(data, function(index, subcatObj) {
-									$('#vname').append('<option value="' + subcatObj.id + '">' + subcatObj.name + '</option>');
+									$('#vname').append('<option price="' + subcatObj.price + '" value="' + subcatObj.id + '">' + subcatObj.name + '</option>');
 								});
 							})
 						}
 					},
 					priceFunction: function(e) {
-						var value = e.target.value;
+						$('#price').html($('#vname option:selected').attr('price'))
+					},
+					clearPrice: function() {
+						$('#price').html(0);
 					}
 				}
-			})
+			});
 		</script>
 	@endif
 
