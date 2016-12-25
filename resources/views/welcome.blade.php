@@ -34,11 +34,11 @@
         </style>
         </script>
 	</head>
-	<body style="background-image: url('/images/bg.jpg'); background-size: cover; background-repeat: no-repeat;">
+	<body style="background-image: url('/images/set.jpg'); background-size: cover; background-repeat: no-repeat;">
         <div>
 		    <div id="nav-main">
 			    <div id="n-m-img ad-mg-btm-0">
-				    <img src="{{asset('images/hkkk.JPG')}}" width="100%" height="400">
+				    <img src="{{asset('images/cover.jpg')}}" width="100%" height="600">
 			    </div>
 		    </div>
 		    <div class="nav-width">
@@ -54,7 +54,7 @@
 					    </ul>
 			        </div>
 			    </nav>
-			    <marquee style="color: #990000; font-size:22px;">
+			    <marquee style="color: #990000; background-color:#fff!important; font-size:22px;">
 				    <b>ഹരേ	രാമ		ഹരേ	രാമ	....രാമ	രാമ		ഹരേ	ഹരേ...........ഹരേ		കൃഷ്ണ	ഹരേ	കൃഷ്ണ.......കൃഷ്ണ കൃഷ്ണ	ഹരേ	ഹരേ...</b>
 			    </marquee>
 			    <div class="col-md-12 ad-pd-0">
@@ -64,7 +64,7 @@
 				    		    <div class="n-m-b-heading">
                                     <b>Dashboard</b>
                                 </div>
-                                <div class="ad-pd n-m-b-body">
+                                <div class="ad-pd n-m-b-body" >
                                     <ul class="templatemo-submenu">
                                         <li id="change1-c">
                                             <a href="#">
@@ -118,16 +118,19 @@
                             </div>
                         </div>
                     </div>
-				    <div class="col-md-9 ad-bd ad-pd-0">
+				    <div class="col-md-9 ad-bd ad-pd-0" style="background-color:#f48f42">
 				    	<div class="n-m-b-heading"></div>
                         <div class="ad-pd">
                             <div class="col-sm-3 col-md-3 text-center" style="padding-left: 40px; padding-right: 40px; padding-top: 20px;">
                                 <img src="{{asset('images/kannan.jpg')}}" class="img-circle ad-img-first" style="width: 90%;" draggable="false">
                             </div>
-                            <div class="col-sm-9 col-md-9" style="color: #4700b3;background-color:#f48f42;">
+                            <div class="col-sm-9 col-md-9" style="color: #4700b3;background-image: url('/images/test.jpg'); background-size: cover; background-repeat: no-repeat;">
                                 <div id="change1">
-                                    <h1 class="text-center"> ശ്രീകൃഷ്ണധ്യാനം</h1>
-                                    <h4>
+                                    <h1 class="text-center" style="color:#a5011f"><br><strong>ശ്രീകൃഷ്ണധ്യാനം</strong></h1>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h3 class="text-center">
                                         കസ്തൂരി തിലകം ലലാട ഫലകേ
                                         <br>
                                         വക്ഷസ്ഥലേ കൗസ്തുഭം
@@ -164,24 +167,28 @@
                                         <br>
                                         <br>
                                         <br>
-                                    </h4>
+                                    </h3>
                                 </div>
                                 <div id="change2" style="display: none;">
-                                    <h1 class="text-center"><span style="color:#a5011f"><b>Daily Rituals</b></span></h1>
-                                    <h4>
+                                    <h1 class="text-center"><span style="color:#a5011f"><b><br>&nbsp; &nbsp; Daily Rituals</b></span></h1>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h4 class="text-center">
                                         <p><span style="color:#a5011f;"> MORNING</span></p>
                                         5.00 :
-                                        PALLIYUNARTHU (WAKING OF THE GODDESS.)<br>
+                                        PALLIYUNARTHU <br>
                                         5.10 :
                                         NIRMALYADARSANAM<br>
                                         5.35 :
-                                        ABHISHEKAM (ABLUTIONS OF THE IDOL IN OIL, MILK ETC.)<br>
+                                        ABHISHEKAM<br>
                                         5.45 :
-                                        GANAPATHY HOMAM (SPECIFIC OFFERING TO GOD VINAYAKA)<br>
+                                        GANAPATHY HOMAM <br>
                                         6.00 :
-                                        DEEPARADHANA (BURNING INCENSE AND LIGHTING LAMPS TO THE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;HONOUR AND GLORY OF THE ALMIGHTY)<br>
+                                        DEEPARADHANA <br>
                                         6.30 :
-                                        USHA POOJA (MORNING RITE)<br>
+                                        USHA POOJA <br>
                                         6.40 :
                                         DEEPARADHANA<br>
                                         8.30 :
@@ -197,17 +204,17 @@
                                         <br>
                                         <br>
                                         <p> <span style="color:#a5011f;">EVENING</span></p>
-                                        5.00 : NADA THURAPPU (OPENING OF SREEKOVIL)<br>
+                                        5.00 : NADA THURAPPU <br>
                                         6.45 :
                                         DEEPARADHANA<br>
                                         7.30 :
-                                        ATHAZHA POOJA (NIGHT RITE)<br>
+                                        ATHAZHA POOJA <br>
                                         8.00 :
-                                        DEEPARADHANA (NIGHT RITE)<br>
+                                        DEEPARADHANA <br>
                                         8.05 :
                                         NADA ADAKUNNU<br>
                                         <br>
-                                        <div class="alert alert-info" role="alert">
+                                        <div class="alert alert-info " role="alert">
                                             POOJA TIMINGS MAY BE ALTERED ON SPECIAL OCCASIONS<br>
                                             Besides these "Kunjoonu" (Choroonu - first rice feeding ceremony for children) <br>Thulabharam, Vidyarambham, Archana etc.<br> can be done at this temple.<br>
                                         </div>
@@ -216,18 +223,25 @@
                                     </h4>
                                 </div>
                                 <div id="change3" style="display: none;">
-                                    <h1 class="text-center"><span style="color:#a5011f"><b>Offerings</b></span></h1>
-                                    <h4>
+
+                                    <h1 class="text-center"><span style="color:#a5011f"><b><br>Offerings</b></span></h1>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <h4 class="text-center">
                                         <b>
-                                            May the blessings of God SREEKRISHNA SWAMI be bestowed upon you,
-                                            <br> reduce agony and save lives through the limitless showering of His mercy.
+                                            May the blessings of God SREEKRISHNA SWAMI <br>be bestowed upon you,
+                                            <br> reduce agony and save lives <br>through the limitless showering of His mercy.
+                                            <br>
                                             <br>
                                             Contributions are welcome from individuals and organisations.
                                             <br>
                                             <br>
-                                            <div class="alert alert-info" role="alert">
-                                                Cheques and drafts drawn in favour of <br>
-                                                "Secretary, KESAVAPURAM SREEKRISHNA SWAMI TEMPLE TRUST "
+                                            <br>
+                                            <div class= "text-center" >
+                                                Cheques and drafts drawn in favour of
+                                                "Secretary,<br> KESAVAPURAM SREEKRISHNA SWAMI TEMPLE TRUST"
                                                 <br> sent to the following address.
                                                 <br>
                                                 <br>
@@ -236,18 +250,29 @@
                                                 MARUTHAMKUZHY<br>
                                                 THIRUVANANTHAPURAM<br>
                                                 PIN CODE -695 030<br>
-                                                PH -0471 2362600<br></b>
+                                                PH -0471 2362600<br>
+                                                <br>
+                                                <br>
+                                                <br></b>
                                             </div>
                                         </b>
                                     </h4>
                                 </div>
                                 <div id="change4" style="display:none;">
-                                    <h1 class="text-center"><span style="color:#a5011f"><b>Pooja Details</b></span></h1>
-                                    <img class="img-index" src="{{asset('images/pooja.JPG')}}" style="width: 100%;">
+                                    <h1 class="text-center"><span style="color:#a5011f;"><b><br>Pooja Details</b></span></h1>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="col-md-9 col-md-offset-2">
+                                    <img class="img" src="{{asset('images/pooja.JPG')}}" style="width: 100%;">
+                                    </div>
                                 </div>
                                 <div id="change5" style="display: none;">
-                                    <h1 class="text-center"><span style="color:#a5011f"><b>Gallery</b></span></h1>
-                                    <div class="col-md-12">
+                                    <h1 class="text-center"><span style="color:#a5011f"><b><br>Gallery</b></span>
+                                    </h1>
+                                    <br>
+                                    <br>    
+                                    <div class="col-xs-3 col-md-12">
                                         <div class="col-md-6">
                                             <a href="{{url('/gallery1')}}"><img class="img-index" src="{{asset('images/dummyimage.png')}}" style="width: 100%;"></a>
                                         </div>
