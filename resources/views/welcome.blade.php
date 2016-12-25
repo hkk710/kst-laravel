@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
+    <head>
 		<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,13 +25,15 @@
         </script>
 	</head>
 	<body>
+    
+    <div style="background-image: url('/images/bg.jpg');background-size:cover;background-repeat: no-repeat;">
 		<div id="nav-main">
 			<div id="n-m-img ad-mg-btm-0">
 				<img src="{{asset('images/hkkk.JPG')}}" width="100%" height="400">
 			</div>
 		</div>
 		<div class="nav-width">
-			<nav class="navbar navbar-inverse n-m-nav ad-mg-btm-0">
+			<nav class="navbar navbar-inverse n-m-nav ad-mg-btm-0 ">
 				<div class="container-fluid">
 					<ul class="nav navbar-nav">
 						<li><a href="{{url('/')}}"><b>Home</b></a></li>
@@ -103,7 +105,7 @@
                         <div class="col-sm-3 col-md-3 text-center" style="padding-left: 40px; padding-right: 40px; padding-top: 20px;">
                             <img src="{{asset('images/kannan.jpg')}}" class="img-circle" style="width: 90%;">
                         </div>
-                        <div class="col-sm-9 col-md-9" style="color: #4700b3;">
+                        <div class="col-sm-9 col-md-9" style="color: #4700b3;background-color:#f48f42;">
                             <div id="change1">
                             <h1 class="text-center"> ശ്രീകൃഷ്ണധ്യാനം</h1>
                             <h4>
@@ -194,10 +196,10 @@
                             <br>
                             <br>
                              </b></h4>
-                                                        </div>
-                                                        <div id="change3" style="display: none;">
-                                                            <h1 class="text-center"><span style="color:#a5011f"><b>Offerings</b></span></h1>
-                                                    <h4><b>
+                            </div>
+                            <div id="change3" style="display: none;">
+                            <h1 class="text-center"><span style="color:#a5011f"><b>Offerings</b></span></h1>
+                            <h4><b>
                             May the blessings of God SREEKRISHNA SWAMI be bestowed upon you,
                             <br> reduce agony and save lives through the limitless showering of His mercy.
                             <br>
@@ -224,6 +226,7 @@
                             </div>
                             <div id="change4" style="display:none;">
                                 <h1 class="text-center"><span style="color:#a5011f"><b>Pooja Details</b></span></h1>
+                                <img class="img-index" src="{{asset('images/pooja.JPG')}}" style="width: 100%;">
                             </div>
                             <div id="change5" style="display: none;">
                                 <h1 class="text-center"><span style="color:#a5011f"><b>Gallery</b></span></h1>
@@ -250,6 +253,15 @@
 				</div><!--row-->
 			</div><!--col-md-12-->
 		</div><!--Main div-->
+        </b>
+        </h4>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
 		@include('partials._footer')
 		@include('partials._audio')
 		@include('partials._js')
