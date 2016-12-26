@@ -267,12 +267,72 @@
                                     </h4>
                                 </div>
                                 <div id="change4" style="display:none;">
-                                    <h1 class="text-center"><span style="color:#a5011f;"><b><br>Pooja Details</b></span></h1>
+                                    <h1 class="text-center"><span style="color:#a5011f;"><b><br><br> &nbsp; &nbsp; &nbsp; &nbsp; Pooja Details</b></span></h1>
                                     <br>
                                     <br>
                                     <br>
-                                    <div class="col-md-9 col-md-offset-2">
-                                    <img class="img" src="{{asset('images/pooja.JPG')}}" style="width: 100%;">
+                                    <div class="col-md-10 col-md-offset-5">
+                                    <h4>
+                                    <p><span style="color:#a5011f ; font-size:30px;"><br><br>വഴിപാടിനങ്ങൾ </span></p>
+                                    ഉദയാസ്തമനപൂജ <br>
+                                    അലങ്കാര മുഴുക്കാപ്പ് <br>
+                                    നിറമാല <br>
+                                    സഹസ്രാവർത്തി ശംഖാഭിഷേകം <br>
+                                    ഭഗവതിസേവ <br>
+                                    നാരായണീയം വായന<br> 
+                                    മുഴുക്കാപ്പ് <br>
+                                    നാഗരൂട്ട് <br>
+                                    പ്രഭാതപൂജ <br>
+                                    ജന്മനക്ഷത്രപൂജ <br>
+                                    ഉണ്ണിയപ്പം <br>
+                                    ഗണപതിഹോമം <br>
+                                    അരവണ <br>
+                                    ശർക്കരപ്പായസം <br>
+                                    പാൽപ്പായസം <br>
+                                    നൂറുംപാലും <br>
+                                    തേൻ അഭിഷേകം <br>
+                                    പാലഭിഷേകം <br>
+                                    കരിക്കഭിഷേകം(11 കരിക്ക് )<br>
+                                    അവിൽ നിവേദ്യം <br>
+                                    മലർ നിവേദ്യം<br>
+                                    തൃക്കൈവെണ്ണ<br>
+                                    തട്ടനിവേദ്യം <br>
+                                    നെയ്യ് വിളക്ക് <br>
+                                    അഷ്‌ട്ടോത്തരാർച്ചന <br>
+                                    ഐക്യമത്യസൂക്തർച്ചന <br>
+                                    മറ്റ്  അർച്ചനകൾ <br>
+                                    ആയില്യപൂജ <br>
+                                    കുഞ്ഞുണ് <br>
+                                    നാമകരണം <br>
+                                    വിദ്യാരംഭം <br>
+                                    തുലാഭാരം <br>
+                                    മാലപൂജ <br>
+                                    പള്ളിക്കെട്ട് <br>
+                                    പേനപൂജ <br>
+                                    താക്കോൽപൂജ<br> 
+                                    നടയ്ക്കുവയ്ക്കുന്നതിന്<br><br>
+                                    <br><br>
+                                    <p><span style="color:#a5011f ; font-size:30px;">വിശേഷാൽ പൂജകൾ </span></p>
+                                    അഷ്ടദ്രവ്യഗണപതിഹോമം <br>
+                                    പുഷ്‌പാഭിഷേകം <br>
+                                    മുഴുക്കാപ്പ് ,ചിറപ്പ് <br>
+                                    ധന്വന്തരിഹോമം <br>
+                                    കളഭാഭിഷേകം <br>
+                                    സുകൃതഹോമം <br>
+                                    സർപ്പബലി <br>
+                                    കലശപൂജ <br>
+                                    ഇളനീർ അഭിഷേകം (108)<br>
+                                    പഞ്ചാമൃതാഭിഷേകം <br>
+                                    ഭഗവതിസേവ <br>
+                                    ലക്ഷ്മിനാരായണപൂജ<br> 
+                                    നെയ്യ് വിളക്ക് ,നെയ്യ് അഭിഷേകം <br>
+                                    ഉറിപ്പൂജ <br>
+                                    അഷ്ട്ടാഭിഷേകം <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    </h4>
+
                                     </div>
                                 </div>
                                 <div id="change5" style="display: none;">
