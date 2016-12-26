@@ -45,14 +45,18 @@ body {
 .ad-pd {
 	padding: 5px!Important;
 }
-ul.templatemo-submenu li:hover {
-	background: #aaa;
-	list-style: none;
-	font-weight: bold;
-	cursor: pointer;
+ul.templatemo-submenu {
+	padding-left: 15px;
 }
-ul.templatemo-submenu li:hover a {
-	text-decoration: none!Important;
+ul.templatemo-submenu li {
+	list-style: none;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+ul.templatemo-submenu li:hover {
+	background: #ccc;
+	padding-left: 20px;
+	cursor: pointer;
 }
 .nav-width {
 	width: 80%;

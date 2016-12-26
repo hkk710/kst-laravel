@@ -1,7 +1,7 @@
 <style>
     .ad-footer {
         padding-top: 10px;
-        font-size: 10px;
+        font-size: 12px;
         border-top: 2px solid #fff;
         color: white;
     }

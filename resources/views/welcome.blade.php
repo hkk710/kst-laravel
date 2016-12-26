@@ -75,28 +75,28 @@
                                 <div class="ad-pd n-m-b-body" >
                                     <ul class="templatemo-submenu">
                                         <li id="change1-c">
-                                            <a href="#">
-                                                <i class= "fa fa-sun-o" style='color:#F14700'></i>&nbsp; &nbsp; Daily Rituals
+                                            <a href="#" style="text-decoration: none!important">
+                                                <i class= "fa fa-sun-o" style='color:#F14700;'></i>&nbsp; &nbsp; Daily Rituals
                                             </a>
                                         </li>
                                         <li id="change2-c">
-                                            <a href="#">
-                                                <i class="fa fa-paper-plane" style='color:#F14700'></i>&nbsp; &nbsp; Offerings
+                                            <a href="#" style="text-decoration: none!important">
+                                                <i class="fa fa-paper-plane" style='color:#F14700;'></i>&nbsp; &nbsp; Offerings
                                             </a>
                                         </li>
                                         <li id="change3-c">
-                                            <a href="#">
-                                                <i class="fa fa-fire" style="color:#F14700"></i> &nbsp; &nbsp; Pooja Details
+                                            <a href="#" style="text-decoration: none!important">
+                                                <i class="fa fa-fire" style="color:#F14700;"></i> &nbsp; &nbsp; Pooja Details
                                             </a>
                                         </li>
                                         <li id="change4-c">
-                                            <a href="#">
-                                                <i class= "fa fa-picture-o" style='color:#F14700'></i>&nbsp;  &nbsp; Gallery
+                                            <a href="#" style="text-decoration: none!important">
+                                                <i class= "fa fa-picture-o" style='color:#F14700;'></i>&nbsp;  &nbsp; Gallery
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{{url('/online_vazhipad')}}">
-                                                <i class= "fa fa-credit-card-alt" style='color:#F14700'></i> &nbsp; Online Vazhipad
+                                            <a href="{{url('/online_vazhipad')}}" style="text-decoration: none!important">
+                                                <i class= "fa fa-credit-card-alt" style='color:#F14700;'></i> &nbsp; Online Vazhipad
                                             </a>
                                         </li>
                                     </ul>
@@ -132,7 +132,7 @@
                             <div class="col-sm-3 col-md-3 text-center" style="padding-left: 40px; padding-right: 40px; padding-top: 20px;">
                                 <img src="{{asset('images/kannan.jpg')}}" class="img-circle ad-img-first" style="width: 90%;" draggable="false">
                             </div>
-                            <div class="col-sm-9 col-md-9" style="color: #4700b3; background-image: url('/images/test.jpg'); background-size: 100% auto; background-repeat: no-repeat;">
+                            <div class="col-sm-9 col-md-9" style="color: #4700b3; background-image: url('/images/test.jpg'); background-size: cover; background-repeat: no-repeat;">
                                 <div id="change1">
                                     <h1 class="text-center" style="color:#a5011f"><br><strong>ശ്രീകൃഷ്ണധ്യാനം</strong></h1>
                                     <br>
