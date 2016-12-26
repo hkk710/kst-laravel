@@ -115,8 +115,11 @@
 										<select id="namebox" class="form-control">
 										    <option value="0" selected>Year</option>
 											<?php
-												for ($i = date('Y'); $i < 2031; $i++) {
+												for ($i = date('Y'); $i < 2100; $i++) {
 													echo '<option value="' . $i . '">' . $i . '</option>';
+													if ($i == date('Y') + 14) {
+														break;
+													}
 												};
 											?>
 										</select>

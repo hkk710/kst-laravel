@@ -19,6 +19,9 @@
             .ad-bd {
                 border: 2px solid #ddd!important;
             }
+            .ad-pd-right {
+                padding: 0;
+            }
             @media screen and (max-width: 992px) {
                 .ad-img-first {
                     width: 100%!Important;;
@@ -31,14 +34,19 @@
                     height: auto!Important;
                 }
             }
+            @media screen and (min-width: 992px) {
+                .ad-pd-right {
+                    padding-right: 10px!Important;
+                }
+            }
         </style>
         </script>
 	</head>
-	<body style="background-image: url('/images/set.jpg'); background-size: cover; background-repeat: no-repeat;">
+	<body style="background-image: url('/images/set.jpg'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center top; background-attachment: fixed;">
         <div>
 		    <div id="nav-main">
 			    <div id="n-m-img ad-mg-btm-0">
-				    <img src="{{asset('images/cover.jpg')}}" width="100%" height="600">
+				    <img src="{{asset('images/cover.jpg')}}" width="100%" height="600" draggable="false">
 			    </div>
 		    </div>
 		    <div class="nav-width">
@@ -59,7 +67,7 @@
 			    </marquee>
 			    <div class="col-md-12 ad-pd-0">
 				    <div>
-				        <div class="col-md-3 ad-pd-0" style="padding-right: 10px!Important;">
+				        <div class="col-md-3 ad-pd-right">
                             <div class="col-md-12 ad-bd ad-pd-0">
 				    		    <div class="n-m-b-heading">
                                     <b>Dashboard</b>
@@ -124,7 +132,7 @@
                             <div class="col-sm-3 col-md-3 text-center" style="padding-left: 40px; padding-right: 40px; padding-top: 20px;">
                                 <img src="{{asset('images/kannan.jpg')}}" class="img-circle ad-img-first" style="width: 90%;" draggable="false">
                             </div>
-                            <div class="col-sm-9 col-md-9" style="color: #4700b3;background-image: url('/images/test.jpg'); background-size: cover; background-repeat: no-repeat;">
+                            <div class="col-sm-9 col-md-9" style="color: #4700b3; background-image: url('/images/test.jpg'); background-size: 100% auto; background-repeat: no-repeat;">
                                 <div id="change1">
                                     <h1 class="text-center" style="color:#a5011f"><br><strong>ശ്രീകൃഷ്ണധ്യാനം</strong></h1>
                                     <br>
@@ -271,7 +279,7 @@
                                     <h1 class="text-center"><span style="color:#a5011f"><b><br>Gallery</b></span>
                                     </h1>
                                     <br>
-                                    <br>    
+                                    <br>
                                     <div class="col-xs-3 col-md-12">
                                         <div class="col-md-6">
                                             <a href="{{url('/gallery1')}}"><img class="img-index" src="{{asset('images/dummyimage.png')}}" style="width: 100%;"></a>
