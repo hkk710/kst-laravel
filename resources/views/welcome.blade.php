@@ -108,7 +108,7 @@
 
 
                             <div class="col-md-12 ad-bd" style="margin-top: 15px; margin-bottom: 15px;">
-                                <div class="n-m-b-heading"><b><strong>Kesavapuram Kalasamskarika Peedom</strong></b></div>
+                                <div class="n-m-b-heading" style="background-color:#CA8F44;"><b><strong>Kesavapuram Kalasamskarika Peedom</strong></b></div>
                                 <div class="templatemo-submenu" style="background-color:#fff;margin: 0!Important;">
 
                                 <img src="{{asset('images/kkp.jpg')}}" class="img-circle ad-img-first" style="width: 100%;" draggable="false">
