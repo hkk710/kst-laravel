@@ -88,7 +88,7 @@
                             <div class="col-md-12 ad-bd" style="margin-top: 15px; margin-bottom: 15px;">
                                 <div class="n-m-b-heading" style="background-image: url('/images/newsfeeed.jpg'); background-size: cover; background-repeat: no-repeat; color:#990000;font-size:22px;"><b><strong><u>News Update</u></strong></b></div>
                                     <ul class="templatemo-submenu" style="background-image: url('/images/newsfeeed.jpg'); background-size: cover; background-repeat: no-repeat; margin: 0!Important;">
-                                        <marquee scrolldelay="200" direction="up" style="background-image: url('/images/newsfeeed.jpg'); background-size: cover; background-repeat: no-repeat;">
+                                        <marquee scrolldelay="20" scrollamount="1" direction="up"  style="background-image: url('/images/newsfeeed.jpg'); background-size: cover; background-repeat: no-repeat; text-align: left; height: 201px; width: 94%;">
                                             <a href="#" style="color:#990000;">Navarathri</a>
                                             <br>
                                             <a href="#" style="color:#990000;">Pallikettu</a>
