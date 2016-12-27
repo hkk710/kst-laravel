@@ -26,13 +26,13 @@
         <div>
 		    <div id="nav-main">
 			    <div id="n-m-img ad-mg-btm-0">
-				    <img src="{{asset('images/cover.jpg')}}" width="100%" height="600" draggable="false">
+				    <img src="{{asset('images/demoback2.jpg')}}" width="100%" height="600" draggable="false" style="background-color:#000;">
 			    </div>
 		    </div>
 		    <div class="nav-width">
-			    <nav class="navbar navbar-inverse n-m-nav ad-mg-btm-0 ">
-				    <div class="container-fluid">
-					    <ul class="nav navbar-nav">
+			    <nav class="navbar navbar-inverse n-m-nav ad-mg-btm-0 " >
+				    <div class="container-fluid" style="background-color:#CA8F44;">
+					    <ul class="nav navbar-nav" >
 						    <li><a href="{{url('/')}}"><b>Home</b></a></li>
 				            <li><a href="{{url('/contact_us')}}">Contact us</a></li>
 				            <li><a href="{{url('/upadevas')}}">Upadevas</a></li>
@@ -49,7 +49,7 @@
 				    <div>
 				        <div class="col-md-3 ad-pd-right">
                             <div class="col-md-12 ad-bd ad-pd-0">
-				    		    <div class="n-m-b-heading">
+				    		    <div class="n-m-b-heading" style="background-color:#CA8F44;">
                                     <b>Dashboard</b>
                                 </div>
 
@@ -123,7 +123,7 @@
 
                     </div>
 				    <div class="col-md-9 ad-bd ad-pd-0" style="background-color:#fff">
-				    	<div class="n-m-b-heading"></div>
+				    	<div class="n-m-b-heading" style="background-color:#CA8F44;"></div>
                         <div class="ad-pd">
                             <div class="col-sm-3 col-md-3 text-center" style="padding-left: 40px; padding-right: 40px; padding-top: 20px;">
                                 <img src="{{asset('images/kannan.jpg')}}" class="img-circle ad-img-first" style="width: 90%;" draggable="false">

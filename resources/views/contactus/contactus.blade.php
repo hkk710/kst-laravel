@@ -28,7 +28,7 @@
 
             <div class="col-md-8 col-md-offset-2" style="margin-bottom: 5%; padding-top: 1% ; ">
                 <div class="panel panel-default" style="border: 0; box-shadow: 0 0 30px 3px #eee;">
-                    <div class="panel-heading">FeedBack</div>
+                    <div class="panel-heading" style="background-color:#CA8F44;">FeedBack</div>
                     <div class="panel-body" style="background: indigo; color: #fff;">
                         <div class="col-md-6" style="color: #fff;">
                             <br>
@@ -45,7 +45,7 @@
                             </div>
                             <br>
                         </div>
-                        <h6 class="text-left">From</h6>
+                        <h6 class="text-left" >From</h6>
                         {!! Form::open(['class' => 'col-md-12', 'action' => 'contactusController@sendmail']) !!}
 
                             {{ Form::label('name', 'Name:', ['style' => 'float: left;']) }}
