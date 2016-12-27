@@ -33,12 +33,12 @@
 					<div class="panel panel-default">
 						<div class="panel-heading" style="background: #e67300; color: #fff;"><b>Online Vazhipad</b></div>
 						<div class="panel-body">
-							{!! Form::open(['id' => 'app']) !!}
+							{!! Form::open(['id' => 'app', 'action' => 'MojoController@pay']) !!}
 								<div class="col-md-4">
 									<strong>Prathista: </strong>
 								</div>
 								<div class="col-md-8 input-group-sm">
-									<select class="form-control">
+									<select class="form-control" name="prathista">
 										<option value="">Add...</option>
 										<option value="">Add...</option>
 										<option value="">Add...</option>
@@ -68,7 +68,7 @@
 									<strong>Your Star (nakshatram):</strong>
 								</div>
 								<div class="col-md-8 input-group-sm">
-									<select name="" id="" class="form-control">
+									<select name="star" class="form-control">
 										<option value="">Add...</option>
 										<option value="">Add...</option>
 										<option value="">Add...</option>
@@ -78,14 +78,14 @@
 									<strong>Your Name:</strong>
 								</div>
 								<div class="col-md-8 input-group-sm">
-									<input type="text" placeholder="Your name...." class="form-control">
+									<input type="text" placeholder="Your name...." class="form-control" name="name">
 								</div><br><br>
 								<div class="col-md-4">
 									<strong>Vazhipad Date:</strong>
 								</div>
 								<div class="col-md-8 input-group-sm">
 									<div class="col-md-4 ad-pd-0">
-										<select id="namebox" class="form-control">
+										<select id="namebox" class="form-control" name="day">
 									        <option value="0" selected>Day</option>
 											<?php
 												for ($i = 1; $i < 32; $i++) {
@@ -95,7 +95,7 @@
 									    </select>
 									</div>
 									<div class="col-md-4 ad-pd-0">
-										<select id="namebox" class="form-control">
+										<select id="namebox" class="form-control" name="month">
 											<option value="0" selected>Month</option>
 											<option value="1">Jan</option>
 										    <option value="2">Feb</option>
@@ -112,12 +112,12 @@
 										</select>
 									</div>
 									<div class="col-md-4 ad-pd-0">
-										<select id="namebox" class="form-control">
+										<select id="namebox" class="form-control" name="year">
 										    <option value="0" selected>Year</option>
 											<?php
 												for ($i = date('Y'); $i < 2100; $i++) {
 													echo '<option value="' . $i . '">' . $i . '</option>';
-													if ($i == date('Y') + 14) {
+													if ($i == date('Y') + 13) {
 														break;
 													}
 												};

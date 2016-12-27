@@ -19,67 +19,6 @@
             .ad-bd {
                 border: 2px solid #ddd!important;
             }
-            .ad-pd-right {
-                padding: 0;
-            }
-            @media screen and (max-width: 992px) {
-                .ad-img-first {
-                    width: 100%!Important;;
-                    height: 200px!Important;
-                }
-            }
-            @media screen and (max-width: 767px) {
-                .ad-img-first {
-                    width: 100%!Important;;
-                    height: auto!Important;
-                }
-            }
-            @media screen and (min-width: 992px) {
-                .ad-pd-right {
-                    padding-right: 10px!Important;
-                }
-            }
-
-            .button {
-                      display: inline-block;
-                      border-radius: 100px;
-                      background-color: #000;
-                      border: none;
-                      color: #fff;
-                      text-align: center;
-                      font-size: 20px;
-                      padding: 10px;
-                      width: 200px;
-                      transition: all 0.5s;
-                      cursor: pointer;
-                      margin: 5px;
-                    }
-
-
-            .button span {
-              cursor: pointer;
-              display: inline-block;
-              position: relative;
-              transition: 0.5s;
-            }
-
-            .button span:after {
-              content: '»';
-              position: absolute;
-              opacity: 0;
-              top: 0;
-              right: -20px;
-              transition: 0.5s;
-                }
-
-            .button:hover span {
-              padding-right: 25px;
-            }
-
-            .button:hover span:after {
-              opacity: 1;
-              right: 0;
-            }
         </style>
         </script>
 	</head>
@@ -113,7 +52,7 @@
 				    		    <div class="n-m-b-heading">
                                     <b>Dashboard</b>
                                 </div>
-                               
+
                                 <div class="ad-pd n-m-b-body" >
                                     <ul class="templatemo-submenu" style="background-color:#990000;">
                                         <li id="change1-c">
@@ -171,14 +110,14 @@
                             <div class="col-md-12 ad-bd" style="margin-top: 15px; margin-bottom: 15px;">
                                 <div class="n-m-b-heading"><b><strong>Kesavapuram Kalasamskarika Peedom</strong></b></div>
                                 <div class="templatemo-submenu" style="background-color:#fff;margin: 0!Important;">
-                                    
+
                                 <img src="{{asset('images/kkp.jpg')}}" class="img-circle ad-img-first" style="width: 100%;" draggable="false">
                                     <br>
                                     <div>
-                                    <a href="{{url('/kalapeedom')}}"  class="w3-btn w3-section w3-right button" style="vertical-align:middle" type="submit" value="SEND MESSAGE" ><span>Admission Open </span></a>
+                                    <a href="{{url('/kalapeedom')}}"  class="w3-btn w3-section w3-right admin-button" style="vertical-align:middle" type="submit" value="SEND MESSAGE" ><span>Admission Open </span></a>
                                     <br>
                                     <br>
-                                 </div>       
+                                 </div>
                                 </div>
                          </div>
 
@@ -356,7 +295,7 @@
                                     നിറമാല <br>
                                     സഹസ്രാവർത്തി ശംഖാഭിഷേകം <br>
                                     ഭഗവതിസേവ <br>
-                                    നാരായണീയം വായന<br> 
+                                    നാരായണീയം വായന<br>
                                     മുഴുക്കാപ്പ് <br>
                                     നാഗരൂട്ട് <br>
                                     പ്രഭാതപൂജ <br>
@@ -386,7 +325,7 @@
                                     മാലപൂജ <br>
                                     പള്ളിക്കെട്ട് <br>
                                     പേനപൂജ <br>
-                                    താക്കോൽപൂജ<br> 
+                                    താക്കോൽപൂജ<br>
                                     നടയ്ക്കുവയ്ക്കുന്നതിന്<br><br>
                                     <br><br>
                                     <p><span style="color:#a5011f ; font-size:30px;">വിശേഷാൽ പൂജകൾ </span></p>
@@ -401,7 +340,7 @@
                                     ഇളനീർ അഭിഷേകം (108)<br>
                                     പഞ്ചാമൃതാഭിഷേകം <br>
                                     ഭഗവതിസേവ <br>
-                                    ലക്ഷ്മിനാരായണപൂജ<br> 
+                                    ലക്ഷ്മിനാരായണപൂജ<br>
                                     നെയ്യ് വിളക്ക് ,നെയ്യ് അഭിഷേകം <br>
                                     ഉറിപ്പൂജ <br>
                                     അഷ്ട്ടാഭിഷേകം <br>

@@ -32,19 +32,17 @@ Route::get('/facilities', 'facilitiesController@index');
 
 Route::get('/kalapeedom', 'kalapeedomController@index');
 
-Route::get('/online_vazhipad', 'onlinevazhipadController@index');
-Route::get('/online_vazhipad/ajax', 'onlinevazhipadController@ajax');
-
 Route::get('/gallery1', 'galleryController@Gallery1');
 Route::get('/gallery2', 'galleryController@gallery2');
 Route::get('/gallery3', 'galleryController@gallery3');
 Route::get('/gallery4', 'galleryController@gallery4');
 
-Route::get('/online_vazhipad/mojo', 'MojoController@index');
-Route::get('/online_vazhipad/mojo/order', 'MojoController@order');
-Route::post('/online_vazhipad/mojo/pay', 'MojoController@pay');
-Route::get('/online_vazhipad/mojo/thankyou', 'MojoController@thankyou');
-Route::get('/online_vazhipad/mojo/webhook', 'MojoController@webhook');
+Route::get('/online_vazhipad', 'onlinevazhipadController@index');
+Route::get('/online_vazhipad/ajax', 'onlinevazhipadController@ajax');
+
+Route::post('/online_vazhipad/pay', 'MojoController@pay');
+Route::get('/online_vazhipad/thankyou', 'MojoController@thankyou');
+Route::get('/online_vazhipad/webhook', 'MojoController@webhook');
 
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/admin', 'AdminController@index');
