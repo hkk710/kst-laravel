@@ -30,6 +30,8 @@ Route::get('/festivals', 'festivalsController@index');
 
 Route::get('/facilities', 'facilitiesController@index');
 
+Route::get('/kalapeedom', 'kalapeedomController@index');
+
 Route::get('/online_vazhipad', 'onlinevazhipadController@index');
 Route::get('/online_vazhipad/ajax', 'onlinevazhipadController@ajax');
 

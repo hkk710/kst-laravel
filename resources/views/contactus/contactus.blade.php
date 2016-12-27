@@ -26,7 +26,7 @@
                 </div>
             @endif
 
-            <div class="col-md-8 col-md-offset-2" style="margin-bottom: 5%; padding-top: 1%;">
+            <div class="col-md-8 col-md-offset-2" style="margin-bottom: 5%; padding-top: 1% ; ">
                 <div class="panel panel-default" style="border: 0; box-shadow: 0 0 30px 3px #eee;">
                     <div class="panel-heading">FeedBack</div>
                     <div class="panel-body" style="background: indigo; color: #fff;">

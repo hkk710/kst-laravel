@@ -39,6 +39,47 @@
                     padding-right: 10px!Important;
                 }
             }
+
+            .button {
+                      display: inline-block;
+                      border-radius: 100px;
+                      background-color: #000;
+                      border: none;
+                      color: #fff;
+                      text-align: center;
+                      font-size: 20px;
+                      padding: 10px;
+                      width: 200px;
+                      transition: all 0.5s;
+                      cursor: pointer;
+                      margin: 5px;
+                    }
+
+
+            .button span {
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            }
+
+            .button span:after {
+              content: '»';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              right: -20px;
+              transition: 0.5s;
+                }
+
+            .button:hover span {
+              padding-right: 25px;
+            }
+
+            .button:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
         </style>
         </script>
 	</head>
@@ -72,41 +113,43 @@
 				    		    <div class="n-m-b-heading">
                                     <b>Dashboard</b>
                                 </div>
+                               
                                 <div class="ad-pd n-m-b-body" >
-                                    <ul class="templatemo-submenu">
+                                    <ul class="templatemo-submenu" style="background-color:#990000;">
                                         <li id="change1-c">
-                                            <a href="#" style="text-decoration: none!important">
+                                            <a href="#" class="btn btn-primary btn-lg btn-block" style="text-decoration: none!important; background-color:#990000;">
                                                 <i class= "fa fa-sun-o" style='color:#F14700;'></i>&nbsp; &nbsp; Daily Rituals
                                             </a>
                                         </li>
                                         <li id="change2-c">
-                                            <a href="#" style="text-decoration: none!important">
+                                            <a href="#" class="btn btn-primary btn-lg btn-block" style="text-decoration: none!important; background-color:#990000;">
                                                 <i class="fa fa-paper-plane" style='color:#F14700;'></i>&nbsp; &nbsp; Offerings
                                             </a>
                                         </li>
                                         <li id="change3-c">
-                                            <a href="#" style="text-decoration: none!important">
+                                            <a href="#" class="btn btn-primary btn-lg btn-block" style="text-decoration: none!important; background-color:#990000;">
                                                 <i class="fa fa-fire" style="color:#F14700;"></i> &nbsp; &nbsp; Pooja Details
                                             </a>
                                         </li>
                                         <li id="change4-c">
-                                            <a href="#" style="text-decoration: none!important">
+                                            <a href="#" class="btn btn-primary btn-lg btn-block " style="text-decoration: none!important; background-color:#990000;">
                                                 <i class= "fa fa-picture-o" style='color:#F14700;'></i>&nbsp;  &nbsp; Gallery
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="{{url('/online_vazhipad')}}" style="text-decoration: none!important">
+                                            <a href="{{url('/online_vazhipad')}}" class="btn btn-primary btn-lg btn-block" style="text-decoration: none!important; background-color:#990000;">
                                                 <i class= "fa fa-credit-card-alt" style='color:#F14700;'></i> &nbsp; Online Vazhipad
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+
+
                             <div class="col-md-12 ad-bd" style="margin-top: 15px; margin-bottom: 15px;">
-                                <div class="n-m-b-heading"><b>News Update</b></div>
-                                <div>
-                                    <ul class="templatemo-submenu" style="background-color:#990000; margin: 0!Important;">
-                                        <marquee scrolldelay="200" direction="up" style="width: 100%; background: yellow;">
+                                <div class="n-m-b-heading" style="background-image: url('/images/newsfeeed.jpg'); background-size: cover; background-repeat: no-repeat; color:#990000;font-size:22px;"><b><strong><u>News Update</u></strong></b></div>
+                                    <ul class="templatemo-submenu" style="background-image: url('/images/newsfeeed.jpg'); background-size: cover; background-repeat: no-repeat; margin: 0!Important;">
+                                        <marquee scrolldelay="200" direction="up" style="background-image: url('/images/newsfeeed.jpg'); background-size: cover; background-repeat: no-repeat;">
                                             <a href="#" style="color:#990000;">Navarathri</a>
                                             <br>
                                             <a href="#" style="color:#990000;">Pallikettu</a>
@@ -123,10 +166,24 @@
                                         </marquee>
                                     </ul>
                                 </div>
-                            </div>
-                        </div>
+
+
+                            <div class="col-md-12 ad-bd" style="margin-top: 15px; margin-bottom: 15px;">
+                                <div class="n-m-b-heading"><b><strong>Kesavapuram Kalasamskarika Peedom</strong></b></div>
+                                <div class="templatemo-submenu" style="background-color:#fff;margin: 0!Important;">
+                                    
+                                <img src="{{asset('images/kkp.jpg')}}" class="img-circle ad-img-first" style="width: 100%;" draggable="false">
+                                    <br>
+                                    <div>
+                                    <a href="{{url('/kalapeedom')}}"  class="w3-btn w3-section w3-right button" style="vertical-align:middle" type="submit" value="SEND MESSAGE" ><span>Admission Open </span></a>
+                                    <br>
+                                    <br>
+                                 </div>       
+                                </div>
+                         </div>
+
                     </div>
-				    <div class="col-md-9 ad-bd ad-pd-0" style="background-color:#f48f42">
+				    <div class="col-md-9 ad-bd ad-pd-0" style="background-color:#fff">
 				    	<div class="n-m-b-heading"></div>
                         <div class="ad-pd">
                             <div class="col-sm-3 col-md-3 text-center" style="padding-left: 40px; padding-right: 40px; padding-top: 20px;">
@@ -174,7 +231,10 @@
                                         <br>
                                         <br>
                                         <br>
+                                        <br><br><br>
                                         <br>
+                                        <br>
+                                        <br><br>
                                     </h3>
                                 </div>
                                 <div id="change2" style="display: none;">
@@ -228,6 +288,10 @@
                                         </div>
                                         <br>
                                         <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br><br>
                                     </h4>
                                 </div>
                                 <div id="change3" style="display: none;">
@@ -261,7 +325,20 @@
                                                 PH -0471 2362600<br>
                                                 <br>
                                                 <br>
-                                                <br></b>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br><br>
+                                                 <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br><br><br>
+                                                <br>
+                                                </b>
                                             </div>
                                         </b>
                                     </h4>
@@ -272,7 +349,7 @@
                                     <br>
                                     <br>
                                     <div class="col-md-10 col-md-offset-5">
-                                    <h4>
+                                    <h4 class="text-center">
                                     <p><span style="color:#a5011f ; font-size:30px;"><br><br>വഴിപാടിനങ്ങൾ </span></p>
                                     ഉദയാസ്തമനപൂജ <br>
                                     അലങ്കാര മുഴുക്കാപ്പ് <br>
@@ -340,7 +417,7 @@
                                     </h1>
                                     <br>
                                     <br>
-                                    <div class="col-xs-3 col-md-12">
+                                    <div class="col-xs-3 col-md-10 col-md-offset-1">
                                         <div class="col-md-6">
                                             <a href="{{url('/gallery1')}}"><img class="img-index" src="{{asset('images/dummyimage.png')}}" style="width: 100%;"></a>
                                         </div>
@@ -352,7 +429,9 @@
                                         </div>
                                         <div class="col-md-6">
                                             <a href="{{url('/gallery4')}}"><img class="img-index" src="{{asset('images/dummyimage.png')}}" style="width: 100%;"></a>
+                                            <br><br><br><br><br><br><br><br><br><br><br><br>
                                         </div>
+
                                     </div>
                                 </div>
 				            </div>
