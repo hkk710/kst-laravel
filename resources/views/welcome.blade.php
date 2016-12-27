@@ -296,7 +296,7 @@
 
                                   <div class="tab-content text-left container-fluid">
                                     <div id="f1" class="tab-pane active">
-                                    
+
 
                                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
                                         <h4 class="text-center" style="font-size:22px;">
@@ -321,12 +321,12 @@
                                                 തേൻ അഭിഷേകം <br>
                                                 പാലഭിഷേകം <br>
                                                 കരിക്കഭിഷേകം(11 കരിക്ക് )<br>
-                                                അവിൽ നിവേദ്യം 
+                                                അവിൽ നിവേദ്യം
                                                 <br>
                                                 <br>
                                                 <br>
                                             </h4>
-                                    
+
                                         </div>
                                         </div>
 
@@ -357,11 +357,11 @@
                                                 <br>
                                                 <br>
                                                 <br>
-                                                <br>   
-                                                <br>                                    
+                                                <br>
+                                                <br>
                                                  </h4>
-                            
-                                
+
+
                                          </div>
                                          </div>
 
@@ -390,7 +390,7 @@
                                                 <br>
                                                 <br>
                                                 <br>
-                                                <br>   
+                                                <br>
                                                 <br>
                                                 <br>
                                                 <br>
@@ -429,7 +429,7 @@
 			</div><!--col-md-12-->
 		</div><!--Main div-->
 		@include('partials._footer')
-		@include('partials._audio')
 		@include('partials._js')
+        @include('partials._audio')
 	</body>
 </html>

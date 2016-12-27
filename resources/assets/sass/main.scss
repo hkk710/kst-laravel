@@ -1,5 +1,5 @@
-$color1: #4700b3;
-$color2: #e67300;
+$color1: #CA8F44;
+$color2: #CA8F44;
 @mixin transtion($time) {
     -webkit-transition: $time;
     transition: $time;
@@ -24,11 +24,7 @@ $color2: #e67300;
 	text-align: center;
 }
 body {
-	background:  $color2;
-    background: -webkit-linear-gradient($color2, #fff);
-    background: -o-linear-gradient($color2, #fff);
-    background: -moz-linear-gradient($color2, #fff);
-    background: linear-gradient($color2, #fff);
+	background:  lighten($color2, 10%);
 }
 .ad-mg-btm-0 {
 	margin-bottom: 0!important;
