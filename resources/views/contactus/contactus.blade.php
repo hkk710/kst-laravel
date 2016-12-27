@@ -3,7 +3,6 @@
 @section('title', 'Contact us')
 
 @section('head')
-  <link rel="stylesheet" type="text/css" href="{{asset('css/font-awesome.css')}}">
   <link rel="stylesheet" href="{{asset('/css/w3.css')}}">
 @endsection
 @section('content')

@@ -3,6 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="{{ asset('favicon.ico') }}">
-<link href="{{asset('/css/app.css')}}" rel="stylesheet">
+<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
+<link rel="stylesheet" href="{{asset('/css/font-awesome.css')}}">
 @yield('head')
