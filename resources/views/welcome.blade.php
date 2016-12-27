@@ -287,68 +287,117 @@
                                     <br>
                                     <br>
                                     <br>
-                                    <div class="col-md-10 col-md-offset-5">
-                                    <h4 class="text-center">
-                                    <p><span style="color:#a5011f ; font-size:30px;"><br><br>വഴിപാടിനങ്ങൾ </span></p>
-                                    ഉദയാസ്തമനപൂജ <br>
-                                    അലങ്കാര മുഴുക്കാപ്പ് <br>
-                                    നിറമാല <br>
-                                    സഹസ്രാവർത്തി ശംഖാഭിഷേകം <br>
-                                    ഭഗവതിസേവ <br>
-                                    നാരായണീയം വായന<br>
-                                    മുഴുക്കാപ്പ് <br>
-                                    നാഗരൂട്ട് <br>
-                                    പ്രഭാതപൂജ <br>
-                                    ജന്മനക്ഷത്രപൂജ <br>
-                                    ഉണ്ണിയപ്പം <br>
-                                    ഗണപതിഹോമം <br>
-                                    അരവണ <br>
-                                    ശർക്കരപ്പായസം <br>
-                                    പാൽപ്പായസം <br>
-                                    നൂറുംപാലും <br>
-                                    തേൻ അഭിഷേകം <br>
-                                    പാലഭിഷേകം <br>
-                                    കരിക്കഭിഷേകം(11 കരിക്ക് )<br>
-                                    അവിൽ നിവേദ്യം <br>
-                                    മലർ നിവേദ്യം<br>
-                                    തൃക്കൈവെണ്ണ<br>
-                                    തട്ടനിവേദ്യം <br>
-                                    നെയ്യ് വിളക്ക് <br>
-                                    അഷ്‌ട്ടോത്തരാർച്ചന <br>
-                                    ഐക്യമത്യസൂക്തർച്ചന <br>
-                                    മറ്റ്  അർച്ചനകൾ <br>
-                                    ആയില്യപൂജ <br>
-                                    കുഞ്ഞുണ് <br>
-                                    നാമകരണം <br>
-                                    വിദ്യാരംഭം <br>
-                                    തുലാഭാരം <br>
-                                    മാലപൂജ <br>
-                                    പള്ളിക്കെട്ട് <br>
-                                    പേനപൂജ <br>
-                                    താക്കോൽപൂജ<br>
-                                    നടയ്ക്കുവയ്ക്കുന്നതിന്<br><br>
-                                    <br><br>
-                                    <p><span style="color:#a5011f ; font-size:30px;">വിശേഷാൽ പൂജകൾ </span></p>
-                                    അഷ്ടദ്രവ്യഗണപതിഹോമം <br>
-                                    പുഷ്‌പാഭിഷേകം <br>
-                                    മുഴുക്കാപ്പ് ,ചിറപ്പ് <br>
-                                    ധന്വന്തരിഹോമം <br>
-                                    കളഭാഭിഷേകം <br>
-                                    സുകൃതഹോമം <br>
-                                    സർപ്പബലി <br>
-                                    കലശപൂജ <br>
-                                    ഇളനീർ അഭിഷേകം (108)<br>
-                                    പഞ്ചാമൃതാഭിഷേകം <br>
-                                    ഭഗവതിസേവ <br>
-                                    ലക്ഷ്മിനാരായണപൂജ<br>
-                                    നെയ്യ് വിളക്ക് ,നെയ്യ് അഭിഷേകം <br>
-                                    ഉറിപ്പൂജ <br>
-                                    അഷ്ട്ടാഭിഷേകം <br>
-                                    <br>
-                                    <br>
-                                    <br>
-                                    </h4>
+                                    <div class="col-md-10 col-md-offset-1">
+                                    <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" style="color:#a5011f;font-size:22px" href="#f1">വഴിപാടിനങ്ങൾ(1)</a></li>
+                                    <li><a data-toggle="tab" style="color:#a5011f;font-size:22px" href="#f2">വഴിപാടിനങ്ങൾ(2)</a></li>
+                                    <li><a data-toggle="tab" style="color:#a5011f;font-size:22px" href="#f3">വിശേഷാൽ പൂജകൾ</a></li>
+                                  </ul>
 
+                                  <div class="tab-content text-left container-fluid">
+                                    <div id="f1" class="tab-pane active">
+                                    
+
+                                        <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                                        <h4 class="text-center" style="font-size:22px;">
+                                        <p><span style="color:#a5011f ; font-size:30px;"><br>വഴിപാടിനങ്ങൾ(1) </span></p>
+                                        <br>
+                                                ഉദയാസ്തമനപൂജ <br>
+                                                അലങ്കാര മുഴുക്കാപ്പ് <br>
+                                                നിറമാല <br>
+                                                സഹസ്രാവർത്തി ശംഖാഭിഷേകം <br>
+                                                ഭഗവതിസേവ <br>
+                                                നാരായണീയം വായന<br>
+                                                മുഴുക്കാപ്പ് <br>
+                                                നാഗരൂട്ട് <br>
+                                                പ്രഭാതപൂജ <br>
+                                                ജന്മനക്ഷത്രപൂജ <br>
+                                                ഉണ്ണിയപ്പം <br>
+                                                ഗണപതിഹോമം <br>
+                                                അരവണ <br>
+                                                ശർക്കരപ്പായസം <br>
+                                                പാൽപ്പായസം <br>
+                                                നൂറുംപാലും <br>
+                                                തേൻ അഭിഷേകം <br>
+                                                പാലഭിഷേകം <br>
+                                                കരിക്കഭിഷേകം(11 കരിക്ക് )<br>
+                                                അവിൽ നിവേദ്യം 
+                                                <br>
+                                                <br>
+                                                <br>
+                                            </h4>
+                                    
+                                        </div>
+                                        </div>
+
+                                        <div id="f2" class="tab-pane fade">
+                                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                                             <h4 class="text-center" style="font-size:22px;">
+                                        <p><span style="color:#a5011f ; font-size:30px;"><br>വഴിപാടിനങ്ങൾ(2) </span></p>
+                                        <br>
+                                            മലർ നിവേദ്യം<br>
+                                            തൃക്കൈവെണ്ണ<br>
+                                            തട്ടനിവേദ്യം <br>
+                                            നെയ്യ് വിളക്ക് <br>
+                                            അഷ്‌ട്ടോത്തരാർച്ചന <br>
+                                            ഐക്യമത്യസൂക്തർച്ചന <br>
+                                            മറ്റ്  അർച്ചനകൾ <br>
+                                            ആയില്യപൂജ <br>
+                                            കുഞ്ഞുണ് <br>
+                                            നാമകരണം <br>
+                                            വിദ്യാരംഭം <br>
+                                            തുലാഭാരം <br>
+                                            മാലപൂജ <br>
+                                            പള്ളിക്കെട്ട് <br>
+                                            പേനപൂജ <br>
+                                            താക്കോൽപൂജ<br>
+                                            നടയ്ക്കുവയ്ക്കുന്നതിന്
+                                             <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>   
+                                                <br>                                    
+                                                 </h4>
+                            
+                                
+                                         </div>
+                                         </div>
+
+                                         <div id="f3" class="tab-pane fade">
+                                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                                        <h4 class="text-center" style="font-size:22px;">
+                                        <p><span style="color:#a5011f ; font-size:30px;">വിശേഷാൽ പൂജകൾ </span></p>
+                                        <br>
+                                        അഷ്ടദ്രവ്യഗണപതിഹോമം <br>
+                                        പുഷ്‌പാഭിഷേകം <br>
+                                        മുഴുക്കാപ്പ് ,ചിറപ്പ് <br>
+                                        ധന്വന്തരിഹോമം <br>
+                                        കളഭാഭിഷേകം <br>
+                                        സുകൃതഹോമം <br>
+                                        സർപ്പബലി <br>
+                                        കലശപൂജ <br>
+                                        ഇളനീർ അഭിഷേകം (108)<br>
+                                        പഞ്ചാമൃതാഭിഷേകം <br>
+                                        ഭഗവതിസേവ <br>
+                                        ലക്ഷ്മിനാരായണപൂജ<br>
+                                        നെയ്യ് വിളക്ക് ,നെയ്യ് അഭിഷേകം <br>
+                                        ഉറിപ്പൂജ <br>
+                                        അഷ്ട്ടാഭിഷേകം <br>
+                                       <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>   
+                                                <br>
+                                                <br>
+                                                <br>
+                                        </h4>
+                                         </div>
+                                         </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div id="change5" style="display: none;">
