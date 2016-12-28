@@ -1,4 +1,4 @@
-<div style="background-image:url('images/login4.jpg');min-height: 100vh; background-size: cover;">
+<body style="background-image:url('images/login4.jpg');min-height: 100vh; background-size: cover;"></body>
 @extends('layouts.app')
 
 @section('content')
@@ -67,6 +67,5 @@
     </div>
 </div>
 @include('partials._footer')
-@include('partials._audio')
-@include('partials._js')
+
 @endsection

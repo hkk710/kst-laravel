@@ -28,7 +28,7 @@ class contactusController extends Controller
           ];
 	    Mail::send('contactus.send', $data, function($message) use ($data) {
 	    	$message->from($data['email']);
-            $message->to("advaitharunjeena@gmail.com");
+            $message->to("hkk710@gmail.com");
 	     	$message->subject($data['subject']);
 	  	});
 	  	Session::flash('success', 'Your Email was sent successfully. Thankyou for your valuable FeedBack.');
