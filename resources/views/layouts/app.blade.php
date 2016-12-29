@@ -8,7 +8,7 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-static-top"  style="background-color:#e67300;">
+    <nav class="navbar navbar-default navbar-static-top"  style="background-color:#CA8F44;">
         <div class="container">
             <div class="navbar-header">
 
@@ -63,6 +63,7 @@
     </nav>
     @yield('content')
     @include('partials._audio')
+    @include('partials._footer')
     <!-- Scripts -->
 
     <script type="text/javascript" src="{{asset('js/main.js')}}"></script>

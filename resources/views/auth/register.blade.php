@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color:#e67300; color: #fff">Register</div>
+                <div class="panel-heading" style="background-color:#CA8F44; color: #fff">Register</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
@@ -80,7 +80,4 @@
         </div>
     </div>
 </div>
-@include('partials._footer')
-@include('partials._audio')
-@include('partials._js')
 @endsection
