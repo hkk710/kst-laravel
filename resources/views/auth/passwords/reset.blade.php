@@ -1,4 +1,3 @@
-<body style="background: #fff!important;"></body>
 @extends('layouts.app')
 
 @section('content')
@@ -6,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color:#e67300; color: #fff">Reset Password</div>
+                <div class="panel-heading" style="background-color:#CA8F44; color: #fff">Reset Password</div>
 
                 <div class="panel-body">
                     @if (session('status'))
