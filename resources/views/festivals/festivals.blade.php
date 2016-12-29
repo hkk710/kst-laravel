@@ -56,7 +56,13 @@
                     <div class="col-sm-6">
                         <h2 style="color:red;">BHAGAVADA SAPTHAHAM</h2>
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            // Here
+                            <p>It all started in the forest of Naimisaranya the sages of Sounagathi approached Suta, enquired about Bhagavatam. Naradha Muni approached Vyasa to give Bhagavatam to this world.</p>
+
+                           <p> Vysa under the direction of Narada Muni , his spiritual master wrote and compiled Srimad Bhagavatam. After Compiling the Bhagavatam, Vysa imparted the Bhagvatam to his son Suka Bramha rishi.</p>
+
+                            <p>Sukabrahma rishi subsequently recited the entire Bhagavatam to Maharaja parikshit in an assembly of learned saints on the bank of the Ganges at Hastinapura (now Delhi). Maharaja parikshit was the emperor of the world and was a great rajarsi (saintly king). Having received the curse that he would die within a week, he renounced his entire kingdom and retired to the bank of the Ganges to fast until death and receive spiritual enlightenment.</p>
+
+                            <p>Sukabrahma rishi, in response to the various questions raised by posed by Maharaja parikshit, concerning everything from the nature of the self to the origin of the universe, held the assembled sages in rapt attention continuously for the seven days (SAPTHAHAM) leading up to the king's death.</p> 
                         </div>
                     </div>
                 </div>

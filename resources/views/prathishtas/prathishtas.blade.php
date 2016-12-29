@@ -1,5 +1,5 @@
 @extends('main')
-@section('title', 'Festivals')
+@section('title', 'UPADEVAS')
 @section('head')
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 @endsection
@@ -17,16 +17,18 @@
     <div class="tab-content text-left container-fluid">
         <div id="f1" class="tab-pane active">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body" style="background-color:#000;">
                     <div class="col-sm-6">
-                        <img src="{{asset('images/ganesh.jpg')}}" style="width: 100%; height: 500px">
+                        <img src="{{asset('images/ganapathi3.jpg')}}" style="width: 100%; height: 500px">
                     </div>
                     <div class="col-sm-6">
-                        <h2 style="color:red;" class="text-center"><u>GANAPATHY</u></h2>
+                       
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            <p>Ganesha also known as Ganapati and Vinayaka, is one of the best-known and most worshipped deities in the Hindu pantheon. His image is found throughout India, Sri Lanka and Nepal. Hindu sects worship him regardless of affiliations. Devotion to Ganesha is widely diffused and extends to Jains and Buddhists.</p>
+                            <div class="col-sm-8 col-md-offset-2">
+                         <img src="{{asset('images/homam1.gif')}}" style="width: 100%; height: 500px">
 
-                            <p>Although he is known by many attributes, Ganesha's elephant head makes him easy to identify. Ganesha is widely revered as the remover of obstacles, the patron of arts and sciences and the deva of intellect and wisdom. As the god of beginnings, he is honoured at the start of rituals and ceremonies. Ganesha is also invoked as patron of letters and learning during writing sessions. Several texts relate mythological anecdotes associated with his birth and exploits and explain his distinct iconography.</p>
+                            </div>
+                             <h2 style="color:#fff;" class="text-center"><u><p>Vinayaka Chathurthi is celebrated in the Temple with special poojas and Kootu Ganapathi Homam.</p> </u></h2>
                         </div>
                     </div>
                 </div>
@@ -34,14 +36,15 @@
         </div>
         <div id="f2" class="tab-pane fade">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body" style="background-color:#881902">
                     <div class="col-sm-6">
-                        <img src="{{asset('images/devi.jpg')}}" style="width: 100%; height: 500px">
+                        <img src="{{asset('images/dugadevi.gif')}}" style="width: 100%; height: 500px">
                     </div>
-                    <div class="col-sm-6">
-                        <h2 style="color:red;" class="text-center"><u>DEVI</u></h2>
+                    <div class="col-sm-6" style="color: #4700b3; background-image: url('/images/devibg.gif'); background-size: cover; background-repeat: no-repeat;">
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            // Here
+                        <br><br><br><br><br><br><br><br><br><br><br><br>
+                        <h2 style="color:#fff;" class="text-center"><u><p>Navarathri mahotsavam is celebrated in the Temple with special poojas and Pusthaka pooja.</p> </u></h2>
+             
                         </div>
                     </div>
                 </div>
@@ -49,14 +52,12 @@
         </div>
         <div id="f3" class="tab-pane fade">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body" >
                     <div class="col-sm-6">
                         <img src="{{asset('images/nagar.jpg')}}" style="width: 100%; height: 500px">
                     </div>
-                    <div class="col-sm-6">
-                        <h2 style="color:red;">NAGAR</h2>
+                    <div class="col-sm-6" style="background-color:#881902">
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            // Here
                         </div>
                     </div>
                 </div>
