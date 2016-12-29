@@ -22,7 +22,7 @@
                         <img src="{{asset('images/ganapathi3.jpg')}}" style="width: 100%; height: 500px">
                     </div>
                     <div class="col-sm-6">
-                       
+
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
                             <div class="col-sm-8 col-md-offset-2">
                          <img src="{{asset('images/homam1.gif')}}" style="width: 100%; height: 500px">
@@ -44,7 +44,7 @@
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
                         <br><br><br><br><br><br><br><br><br><br><br><br>
                         <h2 style="color:#fff;" class="text-center"><u><p>Navarathri mahotsavam is celebrated in the Temple with special poojas and Pusthaka pooja.</p> </u></h2>
-             
+
                         </div>
                     </div>
                 </div>
@@ -52,12 +52,14 @@
         </div>
         <div id="f3" class="tab-pane fade">
             <div class="panel panel-default">
-                <div class="panel-body" >
-                    <div class="col-sm-6">
+                <div class="panel-body" style="background-color:#DDAD2D" >
+                    <div class="col-sm-6"  >
                         <img src="{{asset('images/nagar.jpg')}}" style="width: 100%; height: 500px">
                     </div>
-                    <div class="col-sm-6" style="background-color:#881902">
+                    <div class="col-sm-6" style="color: #4700b3; background-image: url('/images/nagarbg.jpg'); background-size: cover; background-repeat: no-repeat;">
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <h2 style="color:#fff;" class="text-center"><u><p>Monthly Ayilla Pooja is conducted in this Temple.</p> </u></h2>
                         </div>
                     </div>
                 </div>
@@ -72,7 +74,7 @@
                     <div class="col-sm-6">
                         <h2 style="color:red;">BRAHMA REKSHASU</h2>
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            // Here
+                          
                         </div>
                     </div>
                 </div>
@@ -87,7 +89,7 @@
                     <div class="col-sm-6">
                         <h2 style="color:red;">REKSHASU</h2>
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            // Here
+                            
                         </div>
                     </div>
                 </div>
