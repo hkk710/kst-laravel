@@ -1,19 +1,19 @@
 @extends('main')
 @section('title', 'Festivals')
 @section('content')
-    <div class="text-center"><h1 style="color:#fff;">FESTIVALS</h1></div>
+    <div class="text-center"><h1 style="color:#990000;">FESTIVALS</h1></div>
     <div class="container" >
-        <ul class="nav nav-tabs" >
-            <li class="active"><a data-toggle="tab" style="color:red;" href="#f1"><b>JANMASHTAMI MAHOTSAVAM</b></a></li>
-            <li><a data-toggle="tab" style="color:red;" href="#f2"><b>PRETHISHTA DHINAM</b></a></li>
-            <li><a data-toggle="tab" style="color:red;" href="#f3"><b>BHAGAVADA SAPTHAHAM</b></a></li>
-            <li><a data-toggle="tab" style="color:red;" href="#f4"><b>SWARGAVATHIL EKADESHI</b></a></li>
-            <li><a data-toggle="tab" style="color:red;" href="#f5"><b>NAVARATHIRI MAHOTSAVAM</b></a></li>
-            <li><a data-toggle="tab" style="color:red;" href="#f6"><b>MANDALA CHIRAPPU MAHOTSAVAM</b></a></li>
-            <li><a data-toggle="tab" style="color:red;" href="#f7"><b>THRIKARTHIKA MAHOTSAVAM</b></a></li>
-            <li><a data-toggle="tab" style="color:red;" href="#f8"><b>VISHU KANNI</b></a></li>
-            <li><a data-toggle="tab" style="color:red;" href="#f9"><b>VINAYAKA CHATHURTHI</b></a></li>
-            <li><a data-toggle="tab" style="color:red;" href="#f10"><b>THIRUVATHIRA MAHOTSAVAM</b></a></li>
+        <ul class="nav nav-tabs" style="font-size:15px;" >
+            <li class="active"><a data-toggle="tab" style="color:#990000;" href="#f1"><b>JANMASHTAMI MAHOTSAVAM</b></a></li>
+            <li><a data-toggle="tab" style="color:#990000;" href="#f2"><b>PRETHISHTA DHINAM</b></a></li>
+            <li><a data-toggle="tab" style="color:#990000;" href="#f3"><b>BHAGAVADA SAPTHAHAM</b></a></li>
+            <li><a data-toggle="tab" style="color:#990000;" href="#f4"><b>SWARGAVATHIL EKADESHI</b></a></li>
+            <li><a data-toggle="tab" style="color:#990000;" href="#f5"><b>NAVARATHIRI MAHOTSAVAM</b></a></li>
+            <li><a data-toggle="tab" style="color:#990000;" href="#f6"><b>MANDALA CHIRAPPU MAHOTSAVAM</b></a></li>
+            <li><a data-toggle="tab" style="color:#990000;" href="#f7"><b>THRIKARTHIKA MAHOTSAVAM</b></a></li>
+            <li><a data-toggle="tab" style="color:#990000;" href="#f8"><b>VISHU KANNI</b></a></li>
+            <li><a data-toggle="tab" style="color:#990000;" href="#f9"><b>VINAYAKA CHATHURTHI</b></a></li>
+            <li><a data-toggle="tab" style="color:#990000;" href="#f10"><b>THIRUVATHIRA MAHOTSAVAM</b></a></li>
         </ul>
     </div>
     <div class="tab-content text-center container-fluid" >
@@ -49,13 +49,13 @@
         </div>
         <div id="f3" class="tab-pane fade">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body" style="background-color:#746D67;">
                     <div class="col-sm-6">
                         <img src="{{asset('images/sap1.jpg')}}" style="width: 100%; height: 500px">
                     </div>
                     <div class="col-sm-6">
-                        <h2 style="color:red;">BHAGAVADA SAPTHAHAM</h2>
-                        <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                        <h2 style="color:#990000;">BHAGAVADA SAPTHAHAM</h2>
+                        <div style="margin-top: 20px; color: #fff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
                             <p>It all started in the forest of Naimisaranya the sages of Sounagathi approached Suta, enquired about Bhagavatam. Naradha Muni approached Vyasa to give Bhagavatam to this world.</p>
 
                            <p> Vysa under the direction of Narada Muni , his spiritual master wrote and compiled Srimad Bhagavatam. After Compiling the Bhagavatam, Vysa imparted the Bhagvatam to his son Suka Bramha rishi.</p>
