@@ -1,3 +1,4 @@
+<body style="background: #fff!important;"></body>
 @extends('layouts.app')
 
 <!-- Main Content -->
