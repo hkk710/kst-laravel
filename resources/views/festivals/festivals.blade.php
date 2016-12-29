@@ -2,8 +2,8 @@
 @section('title', 'Festivals')
 @section('content')
     <div class="text-center"><h1 style="color:#fff;">FESTIVALS</h1></div>
-    <div class="container">
-        <ul class="nav nav-tabs">
+    <div class="container" >
+        <ul class="nav nav-tabs" >
             <li class="active"><a data-toggle="tab" style="color:red;" href="#f1"><b>JANMASHTAMI MAHOTSAVAM</b></a></li>
             <li><a data-toggle="tab" style="color:red;" href="#f2"><b>PRETHISHTA DHINAM</b></a></li>
             <li><a data-toggle="tab" style="color:red;" href="#f3"><b>BHAGAVADA SAPTHAHAM</b></a></li>
@@ -16,8 +16,8 @@
             <li><a data-toggle="tab" style="color:red;" href="#f10"><b>THIRUVATHIRA MAHOTSAVAM</b></a></li>
         </ul>
     </div>
-    <div class="tab-content text-center container-fluid">
-        <div id="f1" class="tab-pane active text-center">
+    <div class="tab-content text-center container-fluid" >
+        <div id="f1" class="tab-pane active text-center" >
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="col-sm-6">
@@ -130,14 +130,16 @@
         </div>
         <div id="f8" class="tab-pane fade">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body" style="background-image: url('/images/vishukani1.jpg'); background-size: cover; background-repeat: no-repeat;">
                     <div class="col-sm-6">
                         <img src="{{asset('images/vishu.jpeg')}}" style="width: 100%; height: 500px">
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" style="background-image: url('/images/vishukani1.jpg'); background-size: cover; background-repeat: no-repeat;">
                         <h2 style="color:red;">VISHU KANNI</h2>
-                        <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            // Here
+                        <div style="margin-top: 20px; color: #000; font-size: 20px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                            <p>Vishu (Malayalam: വിഷു) is a Hindu festival primarily celebrated in the Indian state of Kerala, which marks the beginning of the harvest year.Vishu falls on the month of Medam in the Malayalam calendar, usually in the second week of April in the Gregorian calendar.</p>
+                            <p>The most important event in Vishu is the Vishukkani, which literally means "the first thing seen on the day of Vishu after waking up". The Vishukkani consists of a ritual arrangement of auspicious articles intended to signify prosperity, including rice, fruits and vegetables, betel leaves, arecanut, metal mirror, yellow flowers called konna (Cassia fistula), holy texts and coins, all arranged around lord Krishna in an ambience lit by nilavilakku </p>
+                            <p>Devotees from all arround kerala reach the temple to have look at lord Sreekrishna on the day and to receive Vishukkaineetam melshanthi</p> 
                         </div>
                     </div>
                 </div>
