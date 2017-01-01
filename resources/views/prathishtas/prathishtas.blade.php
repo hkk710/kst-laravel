@@ -1,32 +1,33 @@
 @extends('main')
-@section('title', 'Festivals')
+@section('title', 'Upadevas')
 @section('head')
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 @endsection
 @section('content')
-    <div class="text-center"><h1 style="color:#fff;">UPADEVAS</h1></div>
+    <div class="text-center"><h1 style="color:#990000;">Upadevas</h1></div>
         <div class="container">
-        <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" style="color:red;" href="#f1"><b>GANAPATHY</b></a></li>
-        <li><a data-toggle="tab" style="color:red;" href="#f2"><b>DEVI</b></a></li>
-        <li><a data-toggle="tab" style="color:red;" href="#f3"><b>NAGAR</b></a></li>
-        <li><a data-toggle="tab" style="color:red;" href="#f4"><b>BRAHMA REKSHASU</b></a></li>
-        <li><a data-toggle="tab" style="color:red;" href="#f5"><b>REKSHASU</b></a></li>
+        <ul class="nav nav-tabs" style="font-size:18px;">
+        <li class="active"><a data-toggle="tab" style="color:#990000;" href="#f1"><b>GANAPATHY</b></a></li>
+        <li><a data-toggle="tab" style="color:#990000;" href="#f2"><b>DEVI</b></a></li>
+        <li><a data-toggle="tab" style="color:#990000;" href="#f3"><b>NAGAR</b></a></li>
+        <li><a data-toggle="tab" style="color:#990000;" href="#f4"><b>BRAHMA REKSHASU & REKSHASU</b></a></li>
       </ul>
     </div>
     <div class="tab-content text-left container-fluid">
         <div id="f1" class="tab-pane active">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body" style="background-color:#000;">
                     <div class="col-sm-6">
-                        <img src="{{asset('images/ganesh.jpg')}}" style="width: 100%; height: 500px">
+                        <img src="{{asset('images/ganapathi3.jpg')}}" style="width: 100%; height: 500px">
                     </div>
                     <div class="col-sm-6">
-                        <h2 style="color:red;" class="text-center"><u>GANAPATHY</u></h2>
-                        <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            <p>Ganesha also known as Ganapati and Vinayaka, is one of the best-known and most worshipped deities in the Hindu pantheon. His image is found throughout India, Sri Lanka and Nepal. Hindu sects worship him regardless of affiliations. Devotion to Ganesha is widely diffused and extends to Jains and Buddhists.</p>
 
-                            <p>Although he is known by many attributes, Ganesha's elephant head makes him easy to identify. Ganesha is widely revered as the remover of obstacles, the patron of arts and sciences and the deva of intellect and wisdom. As the god of beginnings, he is honoured at the start of rituals and ceremonies. Ganesha is also invoked as patron of letters and learning during writing sessions. Several texts relate mythological anecdotes associated with his birth and exploits and explain his distinct iconography.</p>
+                        <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
+                            <div class="col-sm-8 col-md-offset-2">
+                         <img src="{{asset('images/homam1.gif')}}" style="width: 100%; height: 500px">
+
+                            </div>
+                             <h2 style="color:#fff;" class="text-center"><u><p>Vinayaka Chathurthi is celebrated in the Temple with special poojas and Kootu Ganapathi Homam.</p> </u></h2>
                         </div>
                     </div>
                 </div>
@@ -34,14 +35,15 @@
         </div>
         <div id="f2" class="tab-pane fade">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body" style="background-color:#881902">
                     <div class="col-sm-6">
-                        <img src="{{asset('images/devi.jpg')}}" style="width: 100%; height: 500px">
+                        <img src="{{asset('images/dugadevi.gif')}}" style="width: 100%; height: 500px">
                     </div>
-                    <div class="col-sm-6">
-                        <h2 style="color:red;" class="text-center"><u>DEVI</u></h2>
+                    <div class="col-sm-6" style="color: #4700b3; background-image: url('/images/devibg.gif'); background-size: cover; background-repeat: no-repeat;">
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            // Here
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <h2 style="color:#fff;" class="text-center"><u><p>Navarathri mahotsavam is celebrated in the Temple with special poojas and Pusthaka pooja.</p> </u></h2>
+
                         </div>
                     </div>
                 </div>
@@ -49,14 +51,14 @@
         </div>
         <div id="f3" class="tab-pane fade">
             <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="col-sm-6">
+                <div class="panel-body" style="background-color:#804C0B" >
+                    <div class="col-sm-6"  >
                         <img src="{{asset('images/nagar.jpg')}}" style="width: 100%; height: 500px">
                     </div>
-                    <div class="col-sm-6">
-                        <h2 style="color:red;">NAGAR</h2>
+                    <div class="col-sm-6" style="color: #4700b3; background-image: url('/images/nagarbg.jpg'); background-size: cover; background-repeat: no-repeat;">
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            // Here
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <h2 style="color:#fff;" class="text-center"><u><p>Monthly Ayilla Pooja is conducted in this Temple.<br><br></p> </u></h2>
                         </div>
                     </div>
                 </div>
@@ -64,29 +66,13 @@
         </div>
         <div id="f4" class="tab-pane fade">
             <div class="panel panel-default">
-                <div class="panel-body">
+                <div class="panel-body" style="background-color:#000">
+                  
                     <div class="col-sm-6">
-                        <img src="{{asset('images/swa1.jpg')}}" style="width: 100%; height: 500px">
-                    </div>
-                    <div class="col-sm-6">
-                        <h2 style="color:red;">BRAHMA REKSHASU</h2>
+                        <h2 style="color:#990000;"><u>BRAHMA REKSHASU & REKSHASU</u></h2>
                         <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            // Here
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="f5" class="tab-pane fade">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="col-sm-6">
-                        <img src="{{asset('images/nav1.jpg')}}" style="width: 100%; height: 500px">
-                    </div>
-                    <div class="col-sm-6">
-                        <h2 style="color:red;">REKSHASU</h2>
-                        <div style="margin-top: 20px; color: #4000ff; font-size: 18px; font-family: 'Roboto Slab', serif;" class="container-fluid">
-                            // Here
+                        <h2 style="color:#fff;" class="text-center"><u><p>Palpayasam is offered on all Full Moon days(Pournami) in this Temple.<br><br></p> </u></h2>
+                          
                         </div>
                     </div>
                 </div>
