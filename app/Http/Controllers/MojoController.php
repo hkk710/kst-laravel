@@ -8,13 +8,16 @@ use App\Http\Requests;
 
 class MojoController extends Controller
 {
-    public function pay() {
-      return view('online_vazhipad.instamojo.pay');
+    public function pay(Request $request) {
+        $this->validate($request, [
+            'name' => 'required'
+        ]);
+        return view('online_vazhipad.instamojo.pay')->withRequest($request);
     }
     public function thankyou() {
-      return view('online_vazhipad.instamojo.thankyou');
+        return view('online_vazhipad.instamojo.thankyou');
     }
     public function webhook() {
-      return view('online_vazhipad.instamojo.webhook');
+        return view('online_vazhipad.instamojo.webhook');
     }
 }

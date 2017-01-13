@@ -2,11 +2,10 @@
 
     use App\Vname;
 
-    $vname = Vname::find($_POST['vname']);
+    $vname = Vname::find($request->vname);
     $product_name = $vname->name;
     $price = $vname->price;
-    $name = $_POST["name"];
-    $phone = '';
+    $name = $request->name;
     $email = Auth::user()->email;
 
 
@@ -20,13 +19,11 @@
             "purpose" => $product_name,
             "amount" => $price,
             "buyer_name" => $name,
-            "phone" => $phone,
             "send_email" => true,
-            "send_sms" => true,
             "email" => $email,
             'allow_repeated_payments' => false,
-            "redirect_url" => "http://localhost:8000/online_vazhipad/thankyou",
-            "webhook" => "http://localhost:8000/online_vazhipad/webhook"
+            "redirect_url" => url('/') . "/online_vazhipad/thankyou",
+            "webhook" =>  url('/') . "/online_vazhipad/webhook"
             ));
         //print_r($response);
 

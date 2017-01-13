@@ -47,7 +47,6 @@ Route::get('/online_vazhipad/webhook', 'MojoController@webhook');
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/admin', 'AdminController@index');
     Route::get('/admin/users', 'AdminController@userIndex');
-    Route::get('/admin/users/search', 'AdminController@userSearch');
     Route::get('/admin/users/{id}', ['uses' => 'AdminController@userShow', 'as' => 'user.show']);
     Route::get('/admin/users/{id}/edit', ['uses' => 'AdminController@userEdit', 'as' => 'user.edit']);
     Route::put('/admin/users/{id}/update', ['uses' => 'AdminController@userUpdate', 'as' => 'user.update']);

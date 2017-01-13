@@ -19,6 +19,18 @@
 		    </div>
 		</div>
 	@else
+		@if (count($errors) > 0)
+			<div class="container">
+				<div class="alert alert-danger">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<ul>
+						@foreach ($errors->all() as $error)
+							<li>{{ $error }}</li>
+						@endforeach
+					</ul>
+				</div>
+			</div>
+		@endif
 		<div class="col-md-12 text-center">
 			<span class="ad-a-w h4">
 				<span style="color:#fff" class="">Welcome: <b>{{Auth::user()->name}}</b></span>
