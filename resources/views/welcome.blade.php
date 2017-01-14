@@ -130,51 +130,48 @@
                             </div>
                             <div class="col-sm-9 col-md-9" style="color: #4700b3; background-image: url('/images/test.jpg'); background-size: cover; background-repeat: no-repeat;">
                                 <div id="change1">
-                                    <h1 class="text-center" style="color:#a5011f"><br><strong>ശ്രീകൃഷ്ണധ്യാനം</strong></h1>
+                                    <h1 class="text-center" style="color:#a5011f"><br><b>ശ്രീകൃഷ്ണധ്യാനം</b></h1>
                                     <br>
+                                    <h4 class="text-center"><br>
                                     <br>
-                                    <br>
-                                    <h3 class="text-center">
                                         കസ്തൂരി തിലകം ലലാട ഫലകേ
-                                        <br>
+                                        <br><br>
                                         വക്ഷസ്ഥലേ കൗസ്തുഭം
-                                        <br>
+                                        <br><br>
                                         നാസാഗ്രേ നവ  മൗക്തികം കരതലേ
-                                        <br>
+                                        <br><br>
                                         വേണും കരേ കങ്കണം
-                                        <br>
+                                        <br><br>
                                         സർവ്വാംഗേ ഹരിചന്ദനം ചകലയൻ
-                                        <br>
+                                        <br><br>
                                         കണ്ധെ ച മുക്താ വലീം
-                                        <br>
+                                        <br><br>
                                         ഗോപസ്ത്രീ പരിവേഷ്ട്ടിതോ വിജയതേ
-                                        <br>
+                                        <br><br>
                                         ഗോപലച്ചുധാമണി
                                         <br>
                                         <br>
+                                        <br>
                                         സാരം :  നെറ്റിയിൽ കസ്തൂരിതിലകം.
-                                        <br>
-                                        മാറിൽ കൗസ്തുഭമണി, മൂക്കിൽ പവിഴം
-                                        <br>
-                                        പതിച്ച നാസാമണി, കരതളിരുകളിൽ
-                                        <br>
-                                        വേണു, കൈത്തണ്ടയിൽ  കങ്കണം
-                                        <br>
-                                        ദേഹമാസകലം ചന്ദനം, കഴുത്തിൽ
-                                        <br>
-                                        മുത്തുമാല, അങ്ങനെ ഗോപാലന്മാർക്കു
-                                        <br>
-                                        ശിരോലങ്കാരമായ കൃഷ്ണൻ
-                                        <br>
-                                        ഗോപാംഗനകളാൽ ചുറ്റപ്പെട്ട്  വിജയിച്ചരുളുന്നു.
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <br><br><br>
-                                        <br>
-                                        <br>
                                         <br><br>
-                                    </h3>
+                                        മാറിൽ കൗസ്തുഭമണി, മൂക്കിൽ പവിഴം
+                                        <br><br>
+                                        പതിച്ച നാസാമണി, കരതളിരുകളിൽ
+                                        <br><br>
+                                        വേണു, കൈത്തണ്ടയിൽ  കങ്കണം
+                                        <br><br>
+                                        ദേഹമാസകലം ചന്ദനം, കഴുത്തിൽ
+                                        <br><br>
+                                        മുത്തുമാല, അങ്ങനെ ഗോപാലന്മാർക്കു
+                                        <br><br>
+                                        ശിരോലങ്കാരമായ കൃഷ്ണൻ
+                                        <br><br>
+                                        ഗോപാംഗനകളാൽ ചുറ്റപ്പെട്ട്  വിജയിച്ചരുളുന്നു.
+                                        <br><br>
+                                    </h4>
+                                    <br>
+                                    <br>
+                                    <br>
                                 </div>
                                 <div id="change2" style="display: none;">
                                     <h1 class="text-center"><span style="color:#a5011f"><b><br>&nbsp; &nbsp; Daily Rituals</b></span></h1>
