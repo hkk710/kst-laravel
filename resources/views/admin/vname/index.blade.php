@@ -12,6 +12,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Vazhipad type id</th>
+                <th>Prathishta type id</th>
                 <th>Price</th>
                 <th><a href="/admin/vnames/create" class="btn btn-primary">Create new Vazhipad name</a></th>
             </tr>
@@ -24,6 +25,7 @@
                     <td>
                         <a href="{{ route('vtype.show', $vname->vtypes_id) }}">{{ $vname->vtypes_id }} ({{ $vname->vtype->name }})</a>
                     </td>
+                    <td>{{ $vname->prathishtas_id }} ({{ $vname->prathishta->name }})</td>
                     <td>&#8377; {{ $vname->price }}</td>
                     <td>
                         <a href="{{route('vname.show', $vname->id)}}" class="btn btn-sm btn-primary">View</a>

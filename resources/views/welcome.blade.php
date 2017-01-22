@@ -19,6 +19,25 @@
             .ad-bd {
                 border: 2px solid #ddd!important;
             }
+            .affix {
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 100;
+                box-shadow: 0 2px 20px #eee;
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 0.4s;
+                animation-name: fade;
+                animation-duration: 0.4s;
+            }
+            @-webkit-keyframes fade {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
+            @keyframes fade {
+                from {opacity: 0;}
+                to {opacity: 1;}
+            }
         </style>
         </script>
 	</head>
@@ -30,10 +49,10 @@
 			    </div>
 		    </div>
 		    <div class="nav-width">
-			    <nav class="navbar navbar-inverse n-m-nav ad-mg-btm-0 " >
+			    <nav class="navbar navbar-inverse n-m-nav ad-mg-btm-0" id="fixed" data-spy="affix">
 				    <div class="container-fluid" style="background-color:#CA8F44;">
 					    <ul class="nav navbar-nav" >
-						    <li><a href="{{url('/')}}"><b>Home</b></a></li>
+						    <li class="active"><a href="{{url('/')}}"><b>Home</b></a></li>
 				            <li><a href="{{url('/contact_us')}}">Contact us</a></li>
 				            <li><a href="{{url('/upadevas')}}">Upadevas</a></li>
 				            <li><a href="{{url('/activities')}}">Activities</a></li>
@@ -124,7 +143,7 @@
                     </div>
 				    <div class="col-md-9 ad-bd ad-pd-0" style="background-color:#fff">
 				    	<div class="n-m-b-heading" style="background-color:#CA8F44;"></div>
-                        <div class="ad-pd">
+                        <div class="ad-pd" style="overflow: hidden;">
                             <div class="col-sm-3 col-md-3 text-center" style="padding-left: 40px; padding-right: 40px; padding-top: 20px;">
                                 <img src="{{asset('images/kannan.jpg')}}" class="img-circle ad-img-first" style="width: 90%;" draggable="false">
                             </div>
@@ -424,9 +443,12 @@
 				    </div>
 				</div><!--row-->
 			</div><!--col-md-12-->
-		</div><!--Main div-->
+		</div><!--Main div--></div>
 		@include('partials._footer')
 		@include('partials._js')
         @include('partials._audio')
+        <script type="text/javascript">
+            $('#fixed').attr('data-offset-top', $('#nav-main').height())
+        </script>
 	</body>
 </html>

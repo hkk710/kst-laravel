@@ -38,7 +38,7 @@ Route::get('/gallery3', 'galleryController@gallery3');
 Route::get('/gallery4', 'galleryController@gallery4');
 
 Route::get('/online_vazhipad', 'onlinevazhipadController@index');
-Route::get('/online_vazhipad/ajax', 'onlinevazhipadController@ajax');
+Route::post('/online_vazhipad/ajax', 'onlinevazhipadController@ajax');
 
 Route::post('/online_vazhipad/pay', 'MojoController@pay');
 Route::get('/online_vazhipad/thankyou', 'MojoController@thankyou');

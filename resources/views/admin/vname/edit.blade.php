@@ -8,7 +8,14 @@
 
         <select class="form-control w3-margin-bottom" name="vtypes_id">
             @foreach ($vtypes as $vtype)
-                <option value="{{ $vtype->id }}" <?php if ($vtype->id == $vname->vtypes_id) echo 'selected'; ?>>{{ $vtype->name }}</option>
+                <option value="{{ $vtype->id }}" {{ $vtype->id == $vname->vtypes_id ? 'selected' : '' }}>{{ $vtype->name }}</option>
+            @endforeach
+        </select>
+
+        {{ Form::label('prathishtas_id', 'Prathishta Id') }}
+        <select class="form-control w3-margin-bottom" name="prathishtas_id">
+            @foreach ($prathishtas as $prathishta)
+                <option value="{{ $prathishta->id }}" {{ $prathishta->id == $vname->prathishtas_id ? 'selected' : '' }}>{{ $prathishta->name }}</option>
             @endforeach
         </select>
 

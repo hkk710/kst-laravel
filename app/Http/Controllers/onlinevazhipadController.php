@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Vname;
 use App\Vtype;
-use Input;
+use App\Prathishta;
 use Response;
+use App\Star;
 
 class onlinevazhipadController extends Controller
 {
@@ -20,12 +21,13 @@ class onlinevazhipadController extends Controller
     public function index()
     {
         $vtypes = Vtype::all();
-        return view('online_vazhipad.online_vazhipad')->withVtypes($vtypes);
+        $stars = Star::all();
+        $prathishtas = Prathishta::all();
+        return view('online_vazhipad.online_vazhipad')->withVtypes($vtypes)->withPrathishtas($prathishtas)->withStars($stars);
     }
     public function ajax(Request $request) {
-      $cat_id = $request->cat_id;
-      $vnames = Vname::where('vtypes_id', '=', $cat_id)->get();
-      return Response::json($vnames);
+        $vnames = Vname::all()->where('prathishtas_id', '=', $request->prathishtas_id)->where('vtypes_id', '=', $request->vtypes_id);
+        return Response::json($vnames);
     }
     /**
      * Show the form for creating a new resource.
