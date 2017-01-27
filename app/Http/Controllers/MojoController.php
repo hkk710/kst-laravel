@@ -10,7 +10,12 @@ class MojoController extends Controller
 {
     public function pay(Request $request) {
         $this->validate($request, [
-            'name' => 'required'
+            'vtype' => 'not_in:0',
+            'prathista' => 'not_in:0',
+            'vname' => 'not_in:0',
+            'star' => 'not_in:0',
+            'name' => 'required',
+            'date' => 'required|date|after:today'
         ]);
         return view('online_vazhipad.instamojo.pay')->withRequest($request);
     }

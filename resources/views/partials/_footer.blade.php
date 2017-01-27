@@ -18,3 +18,10 @@
 		</p>
 	</div>
 </footer>
+<script>
+    var body = $('body').height();
+    var windo = $(window).height();
+    if (windo > body) {
+        $('footer').css({'position' : 'absolute', 'bottom' : 0})
+    }
+</script>
