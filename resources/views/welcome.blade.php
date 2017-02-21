@@ -444,9 +444,9 @@
 				</div><!--row-->
 			</div><!--col-md-12-->
 		</div><!--Main div--></div>
-		@include('partials._footer')
 		@include('partials._js')
         @include('partials._audio')
+        @include('partials._footer')
         <script type="text/javascript">
             $('#fixed').attr('data-offset-top', $('#nav-main').height())
         </script>
