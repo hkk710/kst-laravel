@@ -19,8 +19,24 @@
 		    </div>
 		</div>
 	@else
+		@if (count($errors) > 0)
+			<div class="container" style="margin-top: 10px;">
+				<div class="alert alert-danger">
+					<a href="#" class="close" data-dismiss="alert">&times;</a>
+					<ul>
+						@foreach ($errors->all() as $error)
+							<li>{{ $error }}</li>
+						@endforeach
+					</ul>
+				</div>
+			</div>
+		@endif
 		<div class="col-md-12 text-center">
+			<h1 style="color: #fff;">KESAVAPURAM SREEKRISHNASWAMY TEMPLE</h1>
+			<br>
 			<span class="ad-a-w h4">
+				<h3 style="color:#fff;"><center>Online Vazhipad Booking</center></h3>
+				<br>
 				<span style="color:#fff" class="">Welcome: <b>{{Auth::user()->name}}</b></span>
 			</span><br>
 			<span class="text-right ad-a-w">
@@ -35,17 +51,6 @@
 						<div class="panel-body">
 							{!! Form::open(['id' => 'app', 'action' => 'MojoController@pay']) !!}
 								<div class="col-md-4">
-									<strong>Prathista: </strong>
-								</div>
-								<div class="col-md-8 input-group-sm">
-									<select class="form-control" name="prathista">
-										<option value="">Add...</option>
-										<option value="">Add...</option>
-										<option value="">Add...</option>
-										<option value="">Add...</option>
-									</select>
-								</div><br><br>
-								<div class="col-md-4">
 									<strong>Vazhipad Type: </strong>
 								</div>
 								<div class="col-md-8 input-group-sm">
@@ -53,6 +58,17 @@
 										<option value="0">Select any</option>
 										@foreach ($vtypes as $vtype)
 											<option value="{{$vtype->id}}">{{$vtype->name}}</option>
+										@endforeach
+									</select>
+								</div><br><br>
+								<div class="col-md-4">
+									<strong>Prathista: </strong>
+								</div>
+								<div class="col-md-8 input-group-sm">
+									<select class="form-control" name="prathista" v-on:change="prathishta" id="pra">
+										<option value="0">Select any</option>
+										@foreach ($prathishtas as $prathishta)
+											<option value="{{ $prathishta->id }}">{{ $prathishta->name }}</option>
 										@endforeach
 									</select>
 								</div><br><br>
@@ -69,9 +85,10 @@
 								</div>
 								<div class="col-md-8 input-group-sm">
 									<select name="star" class="form-control">
-										<option value="">Add...</option>
-										<option value="">Add...</option>
-										<option value="">Add...</option>
+										<option value="0">Select any</option>
+										@foreach ($stars as $star)
+											<option value="{{ $star->id }}">{{ $star->star }}</option>
+										@endforeach
 									</select>
 								</div><br><br>
 								<div class="col-md-4">
@@ -84,46 +101,7 @@
 									<strong>Vazhipad Date:</strong>
 								</div>
 								<div class="col-md-8 input-group-sm">
-									<div class="col-md-4 ad-pd-0">
-										<select id="namebox" class="form-control" name="day">
-									        <option value="0" selected>Day</option>
-											<?php
-												for ($i = 1; $i < 32; $i++) {
-													echo '<option value="' . $i . '">' . $i . '</option>';
-												};
-											?>
-									    </select>
-									</div>
-									<div class="col-md-4 ad-pd-0">
-										<select id="namebox" class="form-control" name="month">
-											<option value="0" selected>Month</option>
-											<option value="1">Jan</option>
-										    <option value="2">Feb</option>
-										    <option value="3">Mar</option>
-										    <option value="4">Apr</option>
-										    <option value="5">May</option>
-										    <option value="6">Jun</option>
-										    <option value="7">Jul</option>
-										    <option value="8">Aug</option>
-										    <option value="9">Sept</option>
-										    <option value="10">Oct</option>
-										    <option value="11">Nov</option>
-										    <option value="12">Dec</option>
-										</select>
-									</div>
-									<div class="col-md-4 ad-pd-0">
-										<select id="namebox" class="form-control" name="year">
-										    <option value="0" selected>Year</option>
-											<?php
-												for ($i = date('Y'); $i < 2100; $i++) {
-													echo '<option value="' . $i . '">' . $i . '</option>';
-													if ($i == date('Y') + 13) {
-														break;
-													}
-												};
-											?>
-										</select>
-									</div>
+									<input type="date" name="date" class="form-control" placeholder="{{ date('d-M-Y') }}">
 								</div><br><br>
 								<div class="col-md-4">
 									<strong>Price:</strong>
@@ -155,35 +133,7 @@
 		<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
 	        {{ csrf_field() }}
 	    </form>
-		<script>
-			new Vue({
-				el: '#app',
-				methods: {
-					changeFunction: function(e) {
-						if ($('#vtype option:selected').val() == 0) {
-							$('#vname').empty();
-							$('#vname').append('<option value="0">Select any Vazhipad Type</option>');
-						}
-						else {
-							var cat_id = e.target.value;
-							$.get('/online_vazhipad/ajax?cat_id=' + cat_id, function(data) {
-								$('#vname').empty();
-								$('#vname').append('<option value="0" price="0">Select any</option>')
-								$.each(data, function(index, subcatObj) {
-									$('#vname').append('<option price="' + subcatObj.price + '" value="' + subcatObj.id + '">' + subcatObj.name + '</option>');
-								});
-							})
-						}
-					},
-					priceFunction: function(e) {
-						$('#price').html($('#vname option:selected').attr('price'))
-					},
-					clearPrice: function() {
-						$('#price').html(0);
-					}
-				}
-			});
-		</script>
+		<script type="text/javascript" src="{{ asset('js/online_vazhipad.js') }}"></script>
 	@endif
 
 @endsection

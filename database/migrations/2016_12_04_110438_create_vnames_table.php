@@ -17,7 +17,9 @@ class CreateVnamesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->integer('vtypes_id')->unsigned();
-            $table->foreign('vtypes_id')->references('id')->on('vtypes');
+            $table->foreign('vtypes_id')->references('id')->on('vtypes')->onDelete('cascade');
+            $table->integer('prathishtas_id')->unsigned();
+            $table->foreign('prathishtas_id')->references('id')->on('prathishtas')->onDelete('cascade');
             $table->integer('price');
             $table->timestamps();
         });

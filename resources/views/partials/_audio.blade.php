@@ -21,7 +21,6 @@
 			document.getElementById('audio-fa').className = "fa-1 fa fa-play fa-ad";
 			audio.pause();
 		}
-		event.preventDefault();
+		e.preventDefault();
 	});
 </script>
-	

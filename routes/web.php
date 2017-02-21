@@ -38,7 +38,7 @@ Route::get('/gallery3', 'galleryController@gallery3');
 Route::get('/gallery4', 'galleryController@gallery4');
 
 Route::get('/online_vazhipad', 'onlinevazhipadController@index');
-Route::get('/online_vazhipad/ajax', 'onlinevazhipadController@ajax');
+Route::post('/online_vazhipad/ajax', 'onlinevazhipadController@ajax');
 
 Route::post('/online_vazhipad/pay', 'MojoController@pay');
 Route::get('/online_vazhipad/thankyou', 'MojoController@thankyou');
@@ -47,7 +47,6 @@ Route::get('/online_vazhipad/webhook', 'MojoController@webhook');
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/admin', 'AdminController@index');
     Route::get('/admin/users', 'AdminController@userIndex');
-    Route::get('/admin/users/search', 'AdminController@userSearch');
     Route::get('/admin/users/{id}', ['uses' => 'AdminController@userShow', 'as' => 'user.show']);
     Route::get('/admin/users/{id}/edit', ['uses' => 'AdminController@userEdit', 'as' => 'user.edit']);
     Route::put('/admin/users/{id}/update', ['uses' => 'AdminController@userUpdate', 'as' => 'user.update']);

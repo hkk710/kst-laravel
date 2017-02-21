@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 
 @section('head')
-    <script type="text/javascript" src="{{ asset('js/vue.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/filter.css') }}">
+    <script type="text/javascript" src="{{ asset('js/filter.js') }}"></script>
 @endsection
 
 @section('content')
@@ -32,4 +33,10 @@
             {{ $vtypes->links() }}
         </div>
     @endif
+@endsection
+
+@section('js')
+    <script type="text/javascript">
+        $('table').DataTable();
+    </script>
 @endsection

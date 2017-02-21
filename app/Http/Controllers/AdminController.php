@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Session;
 use App\Vtype;
 use App\User;
+use App\Prathishta;
 use App\Vname;
 use Response;
 
@@ -25,14 +26,8 @@ class AdminController extends Controller
     // ============================== Users ===================
 
     public function userIndex(Request $request) {
-        $users = User::paginate(15);
+        $users = User::all();
         return view('admin.user.index')->withUsers($users);
-    }
-
-    public function userSearch(Request $request) {
-        $search = $request->search;
-        $users = User::where($request->search_by, '=', $search)->get();
-        return Response::json($users);
     }
 
     public function userShow($id) {
@@ -84,7 +79,7 @@ class AdminController extends Controller
     // ======================= Vazhipad types ===================
 
     public function vtypeIndex(Request $request) {
-        $vtypes = Vtype::paginate(15);
+        $vtypes = Vtype::all();
         return view('admin.vtype.index')->withVtypes($vtypes);
     }
 
@@ -145,13 +140,14 @@ class AdminController extends Controller
         // ======================= Vazhipad names ===================
 
         public function vnameIndex(Request $request) {
-            $vnames = Vname::paginate(15);
+            $vnames = Vname::all();
             return view('admin.vname.index')->withVnames($vnames);
         }
 
         public function vnameCreate() {
             $vtypes = Vtype::all();
-            return view('admin.vname.create')->withVtypes($vtypes);
+            $prathishtas = Prathishta::all();
+            return view('admin.vname.create')->withVtypes($vtypes)->withPrathishtas($prathishtas);
         }
 
         public function vnameStore(Request $request) {
@@ -159,6 +155,7 @@ class AdminController extends Controller
             $vname = new Vname;
             $vname->name = $request->name;
             $vname->vtypes_id = $request->vtypes_id;
+            $vname->prathishtas_id = $request->prathishtas_id;
             $vname->price = $request->price;
 
             $vname->save();
@@ -172,9 +169,10 @@ class AdminController extends Controller
         }
 
         public function vnameEdit($id) {
+            $prathishtas = Prathishta::all();
             $vname = Vname::find($id);
             $vtypes = Vtype::all();
-            return view('admin.vname.edit')->withVname($vname)->withVtypes($vtypes);
+            return view('admin.vname.edit')->withVname($vname)->withVtypes($vtypes)->withPrathishtas($prathishtas);
         }
 
         public function vnameUpdate(Request $request, $id) {
@@ -186,6 +184,7 @@ class AdminController extends Controller
             $vname = Vname::find($id);
             $vname->name = $request->name;
             $vname->vtypes_id = $request->vtypes_id;
+            $vname->prathishtas_id = $request->prathishtas_id;
             $vname->price = $request->price;
             $vname->save();
 

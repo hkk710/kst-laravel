@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 
 @section('head')
-    <script type="text/javascript" src="{{ asset('js/vue.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/filter.css') }}">
+    <script type="text/javascript" src="{{ asset('js/filter.js') }}"></script>
 @endsection
 
 @section('content')
@@ -11,6 +12,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Vazhipad type id</th>
+                <th>Prathishta type id</th>
                 <th>Price</th>
                 <th><a href="/admin/vnames/create" class="btn btn-primary">Create new Vazhipad name</a></th>
             </tr>
@@ -23,6 +25,7 @@
                     <td>
                         <a href="{{ route('vtype.show', $vname->vtypes_id) }}">{{ $vname->vtypes_id }} ({{ $vname->vtype->name }})</a>
                     </td>
+                    <td>{{ $vname->prathishtas_id }} ({{ $vname->prathishta->name }})</td>
                     <td>&#8377; {{ $vname->price }}</td>
                     <td>
                         <a href="{{route('vname.show', $vname->id)}}" class="btn btn-sm btn-primary">View</a>
@@ -38,4 +41,10 @@
             {{ $vnames->links() }}
         </div>
     @endif
+@endsection
+
+@section('js')
+    <script type="text/javascript">
+        $('table').DataTable();
+    </script>
 @endsection
