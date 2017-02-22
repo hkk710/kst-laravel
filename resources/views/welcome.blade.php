@@ -12,6 +12,11 @@
 	    <link rel="icon" href="{{asset('favicon.ico')}}">
 	    <link rel="stylesheet" type="text/css" href="{{asset('css/font-awesome.css')}}">
 	    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
+        <script>
+            window.Laravel =  <?php echo json_encode([
+                'csrfToken' => csrf_token(),
+            ]); ?>
+        </script>
 
 	    <!-- Styles -->
 	    <link href="/css/app.css" rel="stylesheet">
