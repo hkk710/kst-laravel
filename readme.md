@@ -7,7 +7,7 @@ This work is done using laravel.
 - cd to the main folder of the repo
 - Then type `composer install`
 - Then rename or copy `.env.example` to `.env`
-- Edit `.env` like database, email, pusher, etc
+- Edit `.env` like database, email, recaptcha, etc
 - Then `php artisan migrate`
 - Then `php artisan key:generate`
 - Type `php artisan serve`
