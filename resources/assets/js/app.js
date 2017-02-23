@@ -27,6 +27,7 @@ const app = new Vue({
                 $('#vname').empty();
                 $('#vname').append('<option value="0">Select any Prathishta</option>');
                 $('#pra option:first').html('Select any');
+                $('#pra option:first').attr('selected', 'selected');
 			}
 		},
         prathishta: function(e) {
@@ -41,8 +42,9 @@ const app = new Vue({
                     },
                     success: function(result) {
                         $('#vname').empty();
+                        $('#vname').append('<option value="0" price="0">Select any</option>');
                         $.each(result, function(index, value) {
-                            $('#vname').append('<option value="' + value.id + '" price="' + value.price + '">' + value.name + '</option>')
+                            $('#vname').append('<option value="' + value.id + '" price="' + value.price + '">' + value.name + '</option>');
                         });
                     }
                 });
