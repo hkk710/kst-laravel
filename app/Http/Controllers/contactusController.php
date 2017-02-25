@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Mail;
 use Session;
+use App\Mail\ContactUs;
 
 class contactusController extends Controller
 {
@@ -20,17 +21,7 @@ class contactusController extends Controller
                 'subject' => 'required',
     			'comment' => 'min:5'
     		));
-        $data = [
-              'email' => $request->email,
-              'name' => $request->name,
-              'subject' => $request->subject,
-              'bodyMessage' => $request->comment
-          ];
-	    Mail::send('contactus.send', $data, function($message) use ($data) {
-	    	$message->from($data['email']);
-            $message->to("hkk710@gmail.com");
-	     	$message->subject($data['subject']);
-	  	});
+        Mail::to("hkk710@gmail.com")->send(new ContactUs());
 	  	Session::flash('success', 'Your Email was sent successfully. Thankyou for your valuable FeedBack.');
 	  	return redirect()->route('home');
     }
