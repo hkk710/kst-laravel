@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="{{asset('/css/w3.css')}}">
 @endsection
 @section('content')
-    <body class="text-center body">
+    <body>
         <div class="col-md-12">
             @if (Session::has('success'))
                 <div class="alert alert-success">
@@ -25,7 +25,7 @@
                 </div>
             @endif
 
-            <div class="col-md-8 col-md-offset-2" style="margin-bottom: 5%; padding-top: 1% ; ">
+            <div class="col-md-10 col-md-offset-1" style="margin-bottom: 5%; padding-top: 1% ;">
                 <div class="panel panel-default" style="border: 0; box-shadow: 0 0 30px 3px #eee;">
                     <div class="panel-heading" style="background-color:#CA8F44;">FeedBack</div>
                     <div class="panel-body" style="background: indigo; color: #fff;">
@@ -66,10 +66,10 @@
                 </div>
             </div>
 
-            <div class="ad-icon text-left">
-                <li><a href="https://www.facebook.com/KesavapuramSreekrishnaSwamyTemple/"><i class="fa-1 fa fa-facebook fa-ad"></i></a></li>
-                <li><a href="#"><i class="fa-1 fa fa-linkedin fa-ad"></i></a></li>
-                <li><a href="#"><i class="fa-1 fa fa-google-plus fa-ad"></i></a></li>
+            <div class="all-icon text-left">
+                <li><a href="https://www.facebook.com/KesavapuramSreekrishnaSwamyTemple/"><i class="fa-1 fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa-1 fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa-1 fa fa-google-plus"></i></a></li>
             </div>
         </div>
 
