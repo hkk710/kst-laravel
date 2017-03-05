@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/online_vazhipad';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -51,6 +51,7 @@ class RegisterController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'g-recaptcha-response' => 'required|recaptcha',
         ]);
     }
 
@@ -63,7 +64,7 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'name' => ucfirst($data['name']),
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);

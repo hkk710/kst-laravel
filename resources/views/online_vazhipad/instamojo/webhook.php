@@ -1,8 +1,8 @@
 <?php
 
     $data = $_POST;
-    $mac_provided = $data['mac'];  // Get the MAC from the POST data
-    unset($data['mac']);  // Remove the MAC key from the data.
+    $mac_provided = $data['mac'];
+    unset($data['mac']);
 
     $ver = explode('.', phpversion());
     $major = (int) $ver[0];
@@ -15,15 +15,13 @@
          uksort($data, 'strcasecmp');
     }
 
-    // You can get the 'salt' from Instamojo's developers page(make sure to log in first): https://www.instamojo.com/developers
-    // Pass the 'salt' without the <>.
     $mac_calculated = hash_hmac("sha1", implode("|", $data), "571b347bbfd44cd7ab70db80ee9bc944");
 
     if($mac_provided == $mac_calculated){
         echo "MAC is fine";
         // Do something here
         if($data['status'] == "Credit"){
-           // Payment was successful, mark it as completed in your database
+            // Payment was successful, mark it as completed in your database
 
                     $to = 'hkk710@gmail.com';
                     $subject = 'Website Payment Request ' .$data['buyer_name'].'';
@@ -45,12 +43,9 @@
                     // send email
                     mail($to, $subject, $message, $headers);
 
-
-
-
         }
         else{
-           return 'failed';
+            return 'failed';
         }
     }
     else{

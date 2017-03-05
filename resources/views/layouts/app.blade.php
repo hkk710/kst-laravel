@@ -2,6 +2,18 @@
 <html lang="en">
 <head>
     <title>KESAVAPURAM SREEKRISHNASWAMY TEMPLE</title>
+    <style>
+        .ad-footer {
+            padding-top: 10px;
+            font-size: 14px;
+            border-top: 2px solid #fff;
+            color: white;
+            margin-top: 20px;
+        }
+        .ad-footer a {
+            color: #fff!Important;
+        }
+    </style>
     @include('partials._head')
     @include('partials._js')
     <!-- Scripts -->
@@ -63,9 +75,13 @@
     </nav>
     @yield('content')
     @include('partials._audio')
-    @include('partials._footer')
-    <!-- Scripts -->
-
-    <script type="text/javascript" src="{{asset('js/main.js')}}"></script>
+    <footer class="site-footer ad-footer" style="background-color:#CA8F44; width:100%; box-shadow: 0 0 25px 1px #fff; overflow: hidden; position: absolute; bottom: 0;">
+    	<div class="container" style="text-align: center;">
+    		<p style="margin-bottom: 1.1vh">
+    			Copyright © 2016 | All rights reserved | Design by <a href="http://www.hkwebdevelopers.weebly.com">
+    			Kesavapuram Brothers</a>
+    		</p>
+    	</div>
+    </footer>
 </body>
 </html>

@@ -2,10 +2,6 @@
 
 @section('title', 'Online Vazhipad')
 
-@section('head')
-	<script src="{{asset('js/vue.min.js')}}"></script>
-@endsection
-
 @section('content')
 
 	@if (Auth::guest())
@@ -77,7 +73,7 @@
 								</div>
 								<div class="col-md-8 input-group-sm">
 									<select class="form-control" name="vname" id="vname" v-on:change="priceFunction">
-										<option value="0">Select any Vazhipad Type</option>
+										<option value="0" price="0">Select any Vazhipad Type</option>
 									</select>
 								</div><br><br>
 								<div class="col-md-4">
@@ -95,7 +91,7 @@
 									<strong>Your Name:</strong>
 								</div>
 								<div class="col-md-8 input-group-sm">
-									<input type="text" placeholder="Your name...." class="form-control" name="name">
+									<input type="text" placeholder="Your name...." class="form-control" name="name" value="{{ old('name') }}">
 								</div><br><br>
 								<div class="col-md-4">
 									<strong>Vazhipad Date:</strong>
@@ -133,7 +129,6 @@
 		<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
 	        {{ csrf_field() }}
 	    </form>
-		<script type="text/javascript" src="{{ asset('js/online_vazhipad.js') }}"></script>
 	@endif
 
 @endsection
