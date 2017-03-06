@@ -1,25 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>KESAVAPURAM SREEKRISHNASWAMY TEMPLE</title>
-    <style>
-        .ad-footer {
-            padding-top: 10px;
-            font-size: 14px;
-            border-top: 2px solid #fff;
-            color: white;
-            margin-top: 20px;
-        }
-        .ad-footer a {
-            color: #fff!Important;
-        }
-    </style>
+    @section('title', config('app.name'))
     @include('partials._head')
-    @include('partials._js')
-    <!-- Scripts -->
     </script>
 </head>
-<body>
+<body style="background-image:url('images/login4.jpg'); background-size: 100% 100%; background-repeat: no-repeat; background-attachment: fixed;">
     <nav class="navbar navbar-default navbar-static-top"  style="background-color:#CA8F44;">
         <div class="container">
             <div class="navbar-header">
@@ -34,7 +20,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" style="color:#fff" href="{{ url('/') }}">
-                <b> KESAVAPURAM SREEKRISHNASWAMY TEMPLE</b>
+                <b>{{ config('app.name') }}</b>
                 </a>
             </div>
 
@@ -74,14 +60,8 @@
         </div>
     </nav>
     @yield('content')
+    @include('partials._js')
     @include('partials._audio')
-    <footer class="site-footer ad-footer" style="background-color:#CA8F44; width:100%; box-shadow: 0 0 25px 1px #fff; overflow: hidden; position: absolute; bottom: 0;">
-    	<div class="container" style="text-align: center;">
-    		<p style="margin-bottom: 1.1vh">
-    			Copyright © 2016 | All rights reserved | Design by <a href="http://www.hkwebdevelopers.weebly.com">
-    			Kesavapuram Brothers</a>
-    		</p>
-    	</div>
-    </footer>
+    @include('partials._footer')
 </body>
 </html>

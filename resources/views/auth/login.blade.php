@@ -1,5 +1,4 @@
-<body style="background-image:url('images/login4.jpg');min-height: 100vh; background-size: cover;"></body>
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
 <div class="container">
