@@ -12,7 +12,6 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Admin</th>
                 <th></th>
             </tr>
         </thead>
@@ -22,7 +21,6 @@
                     <th>{{ $user->id }}</th>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>{{ $user->admin ? 'True' : 'False' }}</td>
                     <td>
                         <a href="{{ route('user.show', $user->id) }}" class="btn btn-sm btn-primary">View</a>
                         <a href="{{ route('user.edit', $user->id) }}" class="btn btn-sm btn-warning">Edit</a>
