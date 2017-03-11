@@ -15,7 +15,7 @@
          uksort($data, 'strcasecmp');
     }
 
-    $mac_calculated = hash_hmac("sha1", implode("|", $data), "571b347bbfd44cd7ab70db80ee9bc944");
+    $mac_calculated = hash_hmac("sha1", implode("|", $data), env('INSTAMOJO_PRIVATE_SALT'));
 
     if($mac_provided == $mac_calculated){
         echo "MAC is fine";

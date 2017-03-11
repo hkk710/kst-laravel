@@ -3,7 +3,7 @@
     use App\Vname;
 
     $vname = Vname::find($request->vname);
-    $api = new Instamojo\Instamojo('40c79482174c9cc0f8fd8b54e77ab38e', '74420e94c0f2d8cc2a46626d7a13a882', 'https://test.instamojo.com/api/1.1/');
+    $api = new Instamojo\Instamojo(env('INSTAMOJO_API_KEY'), env('INSTAMOJO_AUTH_TOKEN'), 'https://test.instamojo.com/api/1.1/');
 
     try {
         $response = $api->paymentRequestCreate(array(
