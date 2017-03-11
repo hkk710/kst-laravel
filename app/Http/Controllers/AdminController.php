@@ -12,6 +12,9 @@ use Response;
 
 class AdminController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth:admin');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -53,7 +56,6 @@ class AdminController extends Controller
         if ($request->password != null || $request->password != "") {
             $user->password = bcrypt($request->password);
         }
-        $user->admin = $request->admin;
         $user->save();
 
         Session::flash('success', 'User have been successfully edited');

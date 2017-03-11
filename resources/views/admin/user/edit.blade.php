@@ -15,12 +15,6 @@
         {{ Form::label('password_confirmation', 'Confirm Password:') }}
         {{ Form::password('password_confirmation', ['class' => 'form-control w3-margin-bottom']) }}
 
-        {{ Form::label('admin', 'Admin:') }}
-        <select name="admin" id="admin" class="form-control w3-margin-bottom">
-            <option value="0">False</option>
-            <option value="1" {{ $admin = ($user->admin) ? 'selected' : '' }}>True</option>
-        </select>
-
         <div class="col-sm-6">
             <a href="{{ route('user.show', $user->id) }}" class="btn btn-block btn-info">Cancel</a>
         </div>

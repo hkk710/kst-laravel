@@ -13,8 +13,6 @@
 
 Route::get('/', ['uses' => 'HomeController@home', 'as' => 'welcome']);
 
-Route::get('/online_vazhipad', 'onlinevazhipadController@index');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -41,11 +39,13 @@ Route::get('/online_vazhipad', 'onlinevazhipadController@index');
 Route::post('/online_vazhipad/ajax', 'onlinevazhipadController@ajax');
 
 Route::post('/online_vazhipad/pay', 'MojoController@pay');
-Route::get('/online_vazhipad/thankyou', 'MojoController@thankyou');
-Route::get('/online_vazhipad/webhook', 'MojoController@webhook');
+Route::any('/online_vazhipad/thankyou', 'MojoController@thankyou');
+Route::any('/online_vazhipad/webhook', 'MojoController@webhook');
 
-Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'AdminController@index');
+    Route::get('/login', 'AdminLoginController@ShowLogin');
+    Route::post('/login', 'AdminLoginController@PostLogin');
     Route::get('/users', 'AdminController@userIndex');
     Route::get('/users/{id}', ['uses' => 'AdminController@userShow', 'as' => 'user.show']);
     Route::get('/users/{id}/edit', ['uses' => 'AdminController@userEdit', 'as' => 'user.edit']);

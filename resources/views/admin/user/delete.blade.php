@@ -11,9 +11,6 @@
         {{ Form::label('email', 'Email:') }}
         {{ Form::text('email', null, ['class' => 'form-control w3-margin-bottom', 'readonly']) }}
 
-        {{ Form::label('admin', 'Admin:') }}
-        <input type="text" value="{{ $admin = ($user->admin) ? 'True' : 'False' }}" class="form-control w3-margin-bottom" name="admin" id="admin" readonly>
-
     {!! Form::close() !!}
 
     <div class="col-sm-6">

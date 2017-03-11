@@ -2,12 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Admin | KESAVAPURAM SREEKRISHNASWAMY TEMPLE</title>
-    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/admin.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/w3.css')}}">
-    <link rel="stylesheet" href="{{asset('/css/font-awesome.css')}}">
-    <script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+    <title>{{ config('app.name') }}</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/w3.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/font-awesome.css') }}">
+    <script>
+        window.Laravel =  <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
     @yield('head')
   </head>
   <body>
@@ -88,6 +92,7 @@
           document.getElementById("mySidenav").style.display = "none";
         }
     </script>
+    @include('partials._js')
     @yield('js')
   </body>
 </html>
