@@ -23,6 +23,6 @@ class contactusController extends Controller
     		));
         Mail::to("hkk710@gmail.com")->send(new ContactUs());
 	  	Session::flash('success', 'Your Email was sent successfully. Thankyou for your valuable FeedBack.');
-	  	return redirect()->route('home');
+	  	return redirect('contact_us');
     }
 }

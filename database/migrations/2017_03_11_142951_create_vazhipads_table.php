@@ -19,13 +19,13 @@ class CreateVazhipadsTable extends Migration
             $table->string('vtype');
             $table->string('prathishta');
             $table->string('vname');
-            $table->integer('phone');
+            $table->string('phone');
             $table->string('star');
             $table->string('email');
             $table->date('date');
             $table->string('price');
             $table->string('instamojo_id');
-            $table->bloolean('prasadam')->default(false);
+            $table->boolean('prasadam')->default(false);
             $table->timestamps();
         });
     }

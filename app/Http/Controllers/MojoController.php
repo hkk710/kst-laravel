@@ -15,7 +15,8 @@ class MojoController extends Controller
             'vname' => 'not_in:0',
             'star' => 'not_in:0',
             'name' => 'required',
-            'date' => 'required|date|after:today'
+            'date' => 'required|date|after:today',
+            'phone' => 'required|numeric'
         ]);
         return view('online_vazhipad.instamojo.pay')->withRequest($request);
     }
