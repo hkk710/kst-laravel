@@ -23,26 +23,39 @@
         if($data['status'] == "Credit"){
             // Payment was successful, mark it as completed in your database
 
-                    $to = 'hkk710@gmail.com';
-                    $subject = 'Website Payment Request ' .$data['buyer_name'].'';
-                    $message = "<h1>Payment Details</h1>";
-                    $message .= "<hr>";
-                    $message .= '<p><b>ID:</b> '.$data['payment_id'].'</p>';
-                    $message .= '<p><b>Amount:</b> '.$data['amount'].'</p>';
-                    $message .= "<hr>";
-                    $message .= '<p><b>Name:</b> '.$data['buyer_name'].'</p>';
-                    $message .= '<p><b>Email:</b> '.$data['buyer'].'</p>';
-                    $message .= '<p><b>Phone:</b> '.$data['buyer_phone'].'</p>';
+            $to = 'hkk710@gmail.com';
+            $subject = 'Website Payment Request ' .$data['buyer_name'].'';
+            $message = "<h1>Payment Details</h1>";
+            $message .= "<hr>";
+            $message .= '<p><b>ID:</b> '.$data['payment_id'].'</p>';
+            $message .= '<p><b>Amount:</b> '.$data['amount'].'</p>';
+            $message .= "<hr>";
+            $message .= '<p><b>Name:</b> '.$data['buyer_name'].'</p>';
+            $message .= '<p><b>Email:</b> '.$data['buyer'].'</p>';
+            $message .= '<p><b>Phone:</b> '.$data['buyer_phone'].'</p>';
+            $message .= "<hr>";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+            // send email
+            mail($to, $subject, $message, $headers);
 
+            $cart = App\Cart::all()->where('longurl', '=', $data['longurl'])->first();
+            $vazhipad = new App\Vazhipad;
+            $vazhipad->name = $cart->name;
+            $vazhipad->vtype = $cart->vtype;
+            $vazhipad->vname = $cart->vname;
+            $vazhipad->prathishta = $cart->prathishta;
+            $vazhipad->phone = $cart->phone;
+            $vazhipad->star = $cart->star;
+            $vazhipad->email = $data['buyer'];
+            $vazhipad->date = $cart->date;
+            $vazhipad->price = $data['amount'];
+            $vazhipad->payment_id = $data['payment_id'];
+            $vazhipad->payment_request_id = $data['payment_request_id'];
+            $vazhipad->longurl = $data['longurl'];
 
-                    $message .= "<hr>";
-
-
-                    $headers .= "MIME-Version: 1.0\r\n";
-                    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-                    // send email
-                    mail($to, $subject, $message, $headers);
-
+            $vazhipad->save();
+            $cart->delete();
         }
         else{
             return 'failed';

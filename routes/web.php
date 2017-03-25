@@ -33,39 +33,46 @@ Route::get('/gallery2', 'galleryController@gallery2');
 Route::get('/gallery3', 'galleryController@gallery3');
 Route::get('/gallery4', 'galleryController@gallery4');
 
-Route::get('/online_vazhipad', 'onlinevazhipadController@index');
-Route::post('/online_vazhipad/ajax', 'onlinevazhipadController@ajax');
-
-Route::post('/online_vazhipad/pay', 'MojoController@pay');
-Route::any('/online_vazhipad/thankyou', 'MojoController@thankyou');
-Route::any('/online_vazhipad/webhook', 'MojoController@webhook');
+Route::group(['prefix' => 'online_vazhipad'], function() {
+    Route::get('/', 'onlinevazhipadController@index');
+    Route::post('/ajax', 'onlinevazhipadController@ajax');
+    Route::group(['prefix' => 'cart', 'middleware' => 'auth'], function() {
+        Route::get('/', 'CartController@index');
+        Route::post('/store', 'MojoController@store');
+        Route::get('/{id}/edit', 'CartController@edit')->name('cart.edit');
+        Route::put('/{id}/update', 'CartController@update')->name('cart.update');
+        Route::delete('/{id}/destroy', 'CartController@destroy')->name('cart.destroy');
+    });
+    Route::any('/thankyou', 'MojoController@thankyou');
+    Route::any('/webhook', 'MojoController@webhook');
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'AdminController@index');
     Route::get('/login', 'AdminLoginController@ShowLogin');
     Route::post('/login', 'AdminLoginController@PostLogin');
     Route::get('/users', 'AdminController@userIndex');
-    Route::get('/users/{id}', ['uses' => 'AdminController@userShow', 'as' => 'user.show']);
-    Route::get('/users/{id}/edit', ['uses' => 'AdminController@userEdit', 'as' => 'user.edit']);
-    Route::put('/users/{id}/update', ['uses' => 'AdminController@userUpdate', 'as' => 'user.update']);
-    Route::get('/users/{id}/delete', ['uses' => 'AdminController@userDelete', 'as' => 'user.delete']);
-    Route::delete('/users/{id}/destroy', ['uses' => 'AdminController@userDestroy', 'as' => 'user.destroy']);
+    Route::get('/users/{id}', 'AdminController@userShow')->name('user.show');
+    Route::get('/users/{id}/edit', 'AdminController@userEdit')->name('user.edit');
+    Route::put('/users/{id}/update', 'AdminController@userUpdate')->name('user.update');
+    Route::get('/users/{id}/delete', 'AdminController@userDelete')->name('user.delete');
+    Route::delete('/users/{id}/destroy', 'AdminController@userDestroy')->name('user.destroy');
 
     Route::get('/vtypes', 'AdminController@vtypeIndex');
     Route::get('/vtypes/create', 'AdminController@vtypeCreate');
     Route::post('/vtypes/create', 'AdminController@vtypeStore');
-    Route::get('/vtypes/{id}', ['uses' => 'AdminController@vtypeShow', 'as' => 'vtype.show']);
-    Route::get('/vtypes/{id}/edit', ['uses' => 'AdminController@vtypeEdit', 'as' => 'vtype.edit']);
-    Route::put('/vtypes/{id}/update', ['uses' => 'AdminController@vtypeUpdate', 'as' => 'vtype.update']);
-    Route::get('/vtypes/{id}/delete', ['uses' => 'AdminController@vtypeDelete', 'as' => 'vtype.delete']);
-    Route::delete('/vtypes/{id}/destroy', ['uses' => 'AdminController@vtypeDestroy', 'as' => 'vtype.destroy']);
+    Route::get('/vtypes/{id}', 'AdminController@vtypeShow')->name('vtype.show');
+    Route::get('/vtypes/{id}/edit', 'AdminController@vtypeEdit')->name('vtype.edit');
+    Route::put('/vtypes/{id}/update', 'AdminController@vtypeUpdate')->name('vtype.update');
+    Route::get('/vtypes/{id}/delete', 'AdminController@vtypeDelete')->name('vtype.delete');
+    Route::delete('/vtypes/{id}/destroy', 'AdminController@vtypeDestroy')->name('vtype.destroy');
 
     Route::get('/vnames', 'AdminController@vnameIndex');
     Route::get('/vnames/create', 'AdminController@vnameCreate');
     Route::post('/vnames/create', 'AdminController@vnameStore');
-    Route::get('/vnames/{id}', ['uses' => 'AdminController@vnameShow', 'as' => 'vname.show']);
-    Route::get('/vnames/{id}/edit', ['uses' => 'AdminController@vnameEdit', 'as' => 'vname.edit']);
-    Route::put('/vnames/{id}/update', ['uses' => 'AdminController@vnameUpdate', 'as' => 'vname.update']);
-    Route::get('/vnames/{id}/delete', ['uses' => 'AdminController@vnameDelete', 'as' => 'vname.delete']);
-    Route::delete('/vnames/{id}/destroy', ['uses' => 'AdminController@vnameDestroy', 'as' => 'vname.destroy']);
+    Route::get('/vnames/{id}', 'AdminController@vnameShow')->name('vname.show');
+    Route::get('/vnames/{id}/edit', 'AdminController@vnameEdit')->name('vname.edit');
+    Route::put('/vnames/{id}/update', 'AdminController@vnameUpdate')->name('vname.update');
+    Route::get('/vnames/{id}/delete', 'AdminController@vnameDelete')->name('vname.delete');
+    Route::delete('/vnames/{id}/destroy', 'AdminController@vnameDestroy')->name('vname.destroy');
 });

@@ -5,6 +5,7 @@
         border-top: 2px solid #fff;
         color: white;
         margin-top: 20px;
+        z-index: 99;
     }
     .main-footer a {
         color: #fff!Important;
@@ -19,9 +20,11 @@
 	</div>
 </footer>
 <script>
-    var body = $('body').height();
-    var windo = $(window).height();
-    if (windo > body) {
-        $('footer').css({'position' : 'absolute', 'bottom' : 0})
-    }
+    $(document).ready(function() {
+        var body = $('body').height();
+        var windo = $(window).height();
+        if (windo > body) {
+            $('footer').css({'position' : 'absolute', 'bottom' : 0})
+        }
+    });
 </script>
