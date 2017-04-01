@@ -35,11 +35,17 @@ class AdminController extends Controller
 
     public function userShow($id) {
         $user = User::find($id);
+        if ($user == null) {
+            abort(404);
+        }
         return view('admin.user.show')->withUser($user);
     }
 
     public function userEdit($id) {
         $user = User::find($id);
+        if ($user == null) {
+            abort(404);
+        }
         return view('admin.user.edit')->withUser($user);
     }
 
@@ -64,6 +70,9 @@ class AdminController extends Controller
 
     public function userDelete($id) {
         $user = User::find($id);
+        if ($user == null) {
+            abort(404);
+        }
         return view('admin.user.delete')->withUser($user);
     }
 
@@ -101,11 +110,17 @@ class AdminController extends Controller
 
     public function vtypeShow($id) {
         $vtype = Vtype::find($id);
+        if ($vtype == null) {
+            abort(404);
+        }
         return view('admin.vtype.show')->withVtype($vtype);
     }
 
     public function vtypeEdit($id) {
         $vtype = Vtype::find($id);
+        if ($vtype == null) {
+            abort(404);
+        }
         return view('admin.vtype.edit')->withVtype($vtype);
     }
 
@@ -124,6 +139,9 @@ class AdminController extends Controller
 
     public function vtypeDelete($id) {
         $vtype = Vtype::find($id);
+        if ($vtype == null) {
+            abort(404);
+        }
         return view('admin.vtype.delete')->withVtype($vtype);
     }
 
@@ -167,12 +185,18 @@ class AdminController extends Controller
 
         public function vnameShow($id) {
             $vname = Vname::find($id);
+            if ($vname == null) {
+                abort(404);
+            }
             return view('admin.vname.show')->withVname($vname);
         }
 
         public function vnameEdit($id) {
             $prathishtas = Prathishta::all();
             $vname = Vname::find($id);
+            if ($vname == null) {
+                abort(404);
+            }
             $vtypes = Vtype::all();
             return view('admin.vname.edit')->withVname($vname)->withVtypes($vtypes)->withPrathishtas($prathishtas);
         }
@@ -196,6 +220,9 @@ class AdminController extends Controller
 
         public function vnameDelete($id) {
             $vname = Vname::find($id);
+            if ($vname == null) {
+                abort(404);
+            }
             return view('admin.vname.delete')->withVname($vname);
         }
 

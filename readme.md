@@ -1,8 +1,8 @@
-#KESAVAPURAM SREEKRISHNASWAMY TEMPLE
+# KESAVAPURAM SREEKRISHNASWAMY TEMPLE
 This website is created for **KESAVAPURAM SREEKRISHNASWAMY TEMPLE**<br>
 This work is done using laravel.
 <br>To know how to install laravel in your computer visit [Laravel](https://laravel.com/docs/5.4) and dont forgot to install composer, php, node(npm)<br>
-##Instructions
+## Instructions
 - Clone this Repo
 - cd to the main folder of the repo
 - Then type `composer install`

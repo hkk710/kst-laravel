@@ -10,6 +10,8 @@ use App\Vtype;
 use App\Prathishta;
 use Response;
 use App\Star;
+use App\Cart;
+use Auth;
 
 class onlinevazhipadController extends Controller
 {
@@ -23,7 +25,8 @@ class onlinevazhipadController extends Controller
         $vtypes = Vtype::all();
         $stars = Star::all();
         $prathishtas = Prathishta::all();
-        return view('online_vazhipad.online_vazhipad')->withVtypes($vtypes)->withPrathishtas($prathishtas)->withStars($stars);
+        $carts = Cart::all();
+        return view('online_vazhipad.online_vazhipad')->withVtypes($vtypes)->withPrathishtas($prathishtas)->withStars($stars)->withCarts($carts);
     }
     public function ajax(Request $request) {
         $vnames = Vname::all()->where('prathishtas_id', '=', $request->prathishtas_id)->where('vtypes_id', '=', $request->vtypes_id);

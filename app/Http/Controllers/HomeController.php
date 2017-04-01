@@ -18,10 +18,6 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-       return redirect()->route('welcome');
-    }
     public function home() {
         return view('welcome');
     }

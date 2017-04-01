@@ -11,7 +11,9 @@
                     <div class="main-div-img">
                         <img src="{{asset('images/demoback2.jpg')}}" width="100%" draggable="false" style="background-color:#000; border-bottom: 8px solid #fff">
                     </div>
-                    @include('partials._nav')
+                    <div>
+                        @include('partials._nav')
+                    </div>
                     <marquee style="color: #990000; background-color:#fff!important; font-size:22px;">
     				    <b>ഹരേ	രാമ		ഹരേ	രാമ	....രാമ	രാമ		ഹരേ	ഹരേ...........ഹരേ		കൃഷ്ണ	ഹരേ	കൃഷ്ണ.......കൃഷ്ണ കൃഷ്ണ	ഹരേ	ഹരേ...</b>
     			    </marquee>
@@ -366,7 +368,8 @@
         @include('partials._audio')
         <script type="text/javascript">
             $(document).ready(function() {
-                $('.main-nav').attr('data-offset-top', $('.main-div-img').height() - 10);
+                $('.main-nav').closest('div').height($('.main-nav').height());
+                $('.main-nav').attr('data-offset-top', $('.main-div-img').height());
             });
         </script>
     </body>
