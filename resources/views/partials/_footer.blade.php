@@ -24,7 +24,7 @@
         var body = $('body').height();
         var windo = $(window).height();
         if (windo > body) {
-            $('footer').css({'position' : 'absolute', 'bottom' : 0})
+            $('footer').css({'position': 'fixed', 'bottom': 0, 'margin-top': '15px'})
         }
     });
 </script>

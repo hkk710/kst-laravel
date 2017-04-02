@@ -2,7 +2,6 @@
 
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/filter.css') }}">
-    <script type="text/javascript" src="{{ asset('js/filter.js') }}"></script>
 @endsection
 
 @section('content')
@@ -36,14 +35,10 @@
             @endforeach
         </tbody>
     </table>
-    @if (count($vnames) > 15)
-        <div class="text-right">
-            {{ $vnames->links() }}
-        </div>
-    @endif
 @endsection
 
 @section('js')
+    <script type="text/javascript" src="{{ asset('js/filter.js') }}"></script>
     <script type="text/javascript">
         $('table').DataTable();
     </script>

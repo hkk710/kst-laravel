@@ -2,7 +2,6 @@
 
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/filter.css') }}">
-    <script type="text/javascript" src="{{ asset('js/filter.js') }}"></script>
 @endsection
 
 @section('content')
@@ -30,14 +29,26 @@
             @endforeach
         </tbody>
     </table>
-    @if (count($users) > 15)
-        <div class="text-right">
-            {{ $users->links() }}
-        </div>
-    @endif
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+        </thead>
+        <tbody>
+            @foreach ($admins as $admin)
+                <tr>
+                    <th>{{ $admin->id }}</th>
+                    <td>{{ $admin->name }}</td>
+                    <td>{{ $admin->email }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 @endsection
 
 @section('js')
+    <script type="text/javascript" src="{{ asset('js/filter.js') }}"></script>
     <script type="text/javascript">
         $('#table').DataTable();
     </script>

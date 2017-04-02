@@ -8,7 +8,7 @@ use App\Vtype;
 use App\User;
 use App\Prathishta;
 use App\Vname;
-use Response;
+use App\Admin;
 
 class AdminController extends Controller
 {
@@ -30,7 +30,8 @@ class AdminController extends Controller
 
     public function userIndex(Request $request) {
         $users = User::all();
-        return view('admin.user.index')->withUsers($users);
+        $admins = Admin::all();
+        return view('admin.user.index')->withUsers($users)->withAdmins($admins);
     }
 
     public function userShow($id) {
