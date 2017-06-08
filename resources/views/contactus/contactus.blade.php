@@ -1,79 +1,73 @@
-@extends('main')
-
-@section('title', 'Contact us')
-
-@section('head')
-  <link rel="stylesheet" href="{{asset('/css/w3.css')}}">
-@endsection
-@section('content')
-    <body>
-        <div class="col-md-12">
-            @if (Session::has('success'))
-                <div class="alert alert-success">
-                    <a href="#" data-dismiss="alert" class="close">&times;</a>
-                    {{ Session::get('success') }}
-                </div>
-            @endif
-            @if (count($errors) > 0)
-                <div class="alert alert-danger text-left">
-                    Errors:
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
-            <div class="col-md-10 col-md-offset-1" style="margin-bottom: 5%; padding-top: 1% ;">
-                <div class="panel panel-default" style="border: 0; box-shadow: 0 0 30px 3px #eee;">
-                    <div class="panel-heading" style="background-color:#CA8F44;">FeedBack</div>
-                    <div class="panel-body" style="background: indigo; color: #fff;">
-                        <div class="col-md-6" style="color: #fff;">
-                            <br>
-                            <br>
-                            <h6 class="text-left">To</h6>
-                            <h2 class="text-center"><b>KESAVAPURAM SREEKRISHNASWAMY TEMPLE</b></h2>
-                            <h4><strong>MAZHUTHAMKUZHY, KESAVAPURAM ROAD</strong></h4>
-                            <h4><strong>PIN CODE 695 030, PHONE-0471 2362600</strong></h4>
-                        </div>
-                        <div class="col-md-6" style="padding-right: 30px;">
-                            <div class="w3-col m15 w3-container">
-                                <!-- Add Google Maps -->
-                                <div id="googleMap" class="w3-round-large w3-greyscale slideanim" style="width:100%;height:400px;"></div>
-                            </div>
-                            <br>
-                        </div>
-                        <h6 class="text-left" >From</h6>
-                        {!! Form::open(['class' => 'col-md-12', 'action' => 'contactusController@sendmail']) !!}
-
-                            {{ Form::label('name', 'Name:', ['style' => 'float: left;']) }}
-                            {{ Form::text('name', null, ['class' => 'form-control w3-margin-bottom', 'placeholder' => 'Name...*']) }}
-
-                            {{ Form::label('email', 'Email:', ['style' => 'float: left;']) }}
-                            {{ Form::email('email', null, ['class' => 'form-control w3-margin-bottom', 'placeholder' => 'Email...*']) }}
-
-                            {{ Form::label('subject', 'Subject:', ['style' => 'float: left;']) }}
-                            {{ Form::text('subject', 'FeedBack', ['class' => 'form-control w3-margin-bottom', 'placeholder' => 'subject...*']) }}
-
-                            {{ Form::label('comment', 'Message:', ['style' => 'float: left;']) }}
-                            {{ Form::textarea('comment', null, ['class' => 'form-control w3-margin-bottom', 'placeholder' => 'Your valuable feedback...*']) }}
-
-                            {{ Form::submit('Send', ['class' => 'btn btn-success']) }}
-
-                        {!! Form::close() !!}
-                    </div>
-                </div>
+<!DOCTYPE html>
+<html>
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet' type='text/css'>
+<link href="https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="{{asset('/css/contact.css')}}">
+<body style="background-image: url('images/bg.jpg');opacity:0.8;background-repeat: repeat-x;">
+    <div class="col-md-12">
+        @if (Session::has('success'))
+            <div class="alert alert-success">
+                <a href="contact_us" data-dismiss="alert" class="close">&times;</a>
+                {{ Session::get('success') }}
             </div>
-
-            <div class="all-icon text-left">
-                <li><a href="https://www.facebook.com/KesavapuramSreekrishnaSwamyTemple/"><i class="fa-1 fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-1 fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa-1 fa fa-google-plus"></i></a></li>
+        @endif
+        @if (count($errors) > 0)
+            <div class="alert alert-danger text-left">
+                Errors:
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
             </div>
+        @endif
+        </div>
+        <div class="" style="float:left;margin-left:289px;">
+            <div id="content">
+                <div class="" style="text-align:center;">
+                    <h3 style="text-align:center;"><b><strong>കേശവപുരം  ശ്രീകൃഷ്ണസ്വാമി  ക്ഷേത്രം</strong></b></h3>
+                    <p><strong> കേശവപുരം  റോഡ് , മരുതംകുഴി</strong></p>
+            <!--        <p><strong>തിരുവനന്തപുരം , പിൻകോഡ് :695030</strong></p>-->
+                    <p><strong>ഫോൺ: 0471 2362600, 9442362600</strong></p>
+                            <!-- Add Google Maps-->
+                            <br>
+                            <div id="googleMap" class="w3-round-large w3-greyscale slideanim" style="width:100%s;height:400px;"></div>
+                </div>
+             </div>
         </div>
 
+        <div class="" style="float:right; margin-right:289px;">
+            <div id="content">
+                <h1>Contact</h1>
 
+                {!! Form::open(['class' => 'col-md-12', 'action' => 'contactusController@sendmail']) !!}
+                <p>
+                    {{ Form::label('name', ' Name:', ['class'=> 'icon-user','style' => 'float: left;']) }}
+                    <span class="required">&nbsp; *</span>
+                    {{ Form::text('name', null, ['class' => 'form-control w3-margin-bottom ', 'placeholder' => 'Name...*']) }}
+                </p>
+                <p>
+                    {{ Form::label('email', ' E-mail address:', ['class'=> 'icon-envelope','style' => 'float: left;']) }}
+                    <span class="required">&nbsp; *</span>
+                    {{ Form::email('email', null, ['class' => 'form-control w3-margin-bottom', 'placeholder' => 'Email...*']) }}
+                </p>
+                <p>
+                    {{ Form::label('subject', 'Subject:', ['class'=> 'icon-bullhorn','style' => 'float: left;']) }}
+                    {{ Form::text('subject', 'FeedBack', ['class' => 'form-control w3-margin-bottom', 'placeholder' => 'subject...*']) }}
+                </p>
+
+                    {{ Form::label('comment', 'Message:', ['class'=> 'icon-comment','style' => 'float: left;']) }}
+                    <span class="required"> &nbsp; *</span>
+                    {{ Form::textarea('comment', null, ['class' => 'form-control w3-margin-bottom', 'placeholder' => 'Your valuable feedback...*']) }}
+
+                    <p class="indication">Fields with
+                        <span class="required"> * </span>are required</p>
+                    {{ Form::submit('Send this mail !', ['class' => 'btn btn-success']) }}
+
+                {!! Form::close() !!}
+            </div>
+        </div>
+    @include('partials._footer')
         <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script>
             // Google Map Location
@@ -99,5 +93,5 @@
 
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>
-    </body>
-@endsection
+</body>
+</html>
