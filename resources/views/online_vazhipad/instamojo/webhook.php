@@ -10,17 +10,16 @@
 
     if ($major >= 5 and $minor >= 4) {
         ksort($data, SORT_STRING | SORT_FLAG_CASE);
-    }
-    else {
+    } else {
         uksort($data, 'strcasecmp');
     }
 
-    $mac_calculated = hash_hmac("sha1", implode("|", $data), "571b347bbfd44cd7ab70db80ee9bc944");
+    $mac_calculated = hash_hmac('sha1', implode('|', $data), '571b347bbfd44cd7ab70db80ee9bc944');
 
     if ($mac_provided == $mac_calculated) {
-        echo "MAC is fine";
+        echo 'MAC is fine';
         // Do something here
-        if ($data['status'] == "Credit" ) {
+        if ($data['status'] == 'Credit') {
             // Payment was successful, mark it as completed in your database
 
             // $to = 'hkk710@gmail.com';
@@ -40,7 +39,7 @@
             // mail($to, $subject, $message, $headers);
 
             $cart = App\Cart::all()->where('longurl', '=', $data['longurl'])->first();
-            $vazhipad = new App\Vazhipad;
+            $vazhipad = new App\Vazhipad();
             $vazhipad->name = $cart->name;
             $vazhipad->vtype = $cart->vtype;
             $vazhipad->vname = $cart->vname;
@@ -56,13 +55,9 @@
 
             $vazhipad->save();
             $cart->delete();
-        }
-        else {
+        } else {
             return 'failed';
         }
+    } else {
+        echo 'Invalid MAC passed';
     }
-    else {
-        echo "Invalid MAC passed";
-    }
-
-?>
