@@ -15,7 +15,7 @@
                         @include('partials._nav')
                     </div>
                     <marquee style="color: #990000; background-color:#fff!important; font-size:22px;">
-    				    <b>ഹരേ	രാമ		ഹരേ	രാമ	....രാമ	രാമ		ഹരേ	ഹരേ...........ഹരേ		കൃഷ്ണ	ഹരേ	കൃഷ്ണ.......കൃഷ്ണ കൃഷ്ണ	ഹരേ	ഹരേ...</b>
+    				    <b>ഹരേ	രാമ		ഹരേ	രാമ	....രാമ	രാമ		ഹരേ	ഹരേ...........ഹരേ		കൃഷ്ണ	ഹരേ	കൃഷ്ണ.......കൃഷ്ണ കൃഷ്ണ	ഹരേ	ഹരേ...</b> Hi
     			    </marquee>
                     <div class="col-md-12 no-padding">
                         <div class="col-md-3 no-padding">
