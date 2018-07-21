@@ -18,87 +18,20 @@ class CreateStarsTable extends Migration
             $table->string('star');
             $table->timestamps();
         });
-        DB::table('stars')->insert(
-          ['star' => 'Ashwathi']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Bharani']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Karthika']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Rohini']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Makayeeram']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Thiruvathira']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Punartham']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Pooyam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Aaylliyam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Makam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Pooram']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Utharam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Atham']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Chithira']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Chothi']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Vishakam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Anizham']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Ketta']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Moolam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Pooradam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Utharadam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Thiruvonam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Avittam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Chathayam']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Puroorttathi']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Uthrttathi']
-        );
-        DB::table('stars')->insert(
-          ['star' => 'Revathi']
-        );
+
+        $stars = [
+            'Ashwathi', 'Bharani', 'Karthika', 'Rohini', 'Makayeeram', 'Thiruvathira',
+            'Punartham', 'Pooyam', 'Aaylliyam', 'Makam', 'Pooram', 'Utharam', 'Atham',
+            'Chithira', 'Chothi', 'Vishakam', 'Anizham', 'Ketta', 'Moolam', 'Pooradam',
+            'Utharadam', 'Thiruvonam', 'Avittam', 'Chathayam', 'Puroorttathi',
+            'Uthrttathi', 'Revathi'
+        ];
+
+        foreach ($stars as $star) {
+            DB::table('stars')->insert([
+                'star' => $star
+            ]);
+        }
     }
 
     /**

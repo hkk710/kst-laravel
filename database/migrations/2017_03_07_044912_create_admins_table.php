@@ -22,7 +22,7 @@ class CreateAdminsTable extends Migration
             $table->timestamps();
         });
         DB::table('admins')->insert(
-          ['name' => 'Admin', 'email' => 'admin@kst.com', 'password' => bcrypt('krishna')]
+            ['name' => 'Admin', 'email' => 'admin@kst.com', 'password' => bcrypt('krishna')]
         );
     }
 

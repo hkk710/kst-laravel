@@ -18,18 +18,14 @@ class CreatePrathishtasTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
-        DB::table('prathishtas')->insert(
-          ['name' => 'Sreekrishnaswamy']
-        );
-        DB::table('prathishtas')->insert(
-          ['name' => 'Ganapathy']
-        );
-        DB::table('prathishtas')->insert(
-          ['name' => 'Devi']
-        );
-        DB::table('prathishtas')->insert(
-          ['name' => 'Nagar']
-        );
+
+        $values = ['Sreekrishnaswamy', 'Ganapathy', 'Devi', 'Nagar'];
+
+        foreach ($values as $value) {
+            DB::table('prathishtas')->insert(
+                ['name' => $value]
+            );
+        }
     }
 
     /**

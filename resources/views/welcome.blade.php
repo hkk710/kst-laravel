@@ -9,7 +9,7 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="main-div">
                     <div class="main-div-img">
-                        <img src="{{asset('images/demoback2.jpg')}}" width="100%" draggable="false" style="background-color:#000; border-bottom: 8px solid #fff" onload="setTopHeight()">
+                        <img src="{{asset('images/demoback2.jpg')}}" width="100%" draggable="false" style="background-color:#000; border-bottom: 8px solid #fff">
                     </div>
                     <div>
                         @include('partials._nav')
@@ -367,8 +367,8 @@
         @include('partials._footer')
         @include('partials._audio')
         <script type="text/javascript">
-            function setTopHeight() {
-                $('.main-nav').attr('data-offset-top', $('.main-div-img').height());
+            window.onload = function() {
+                document.querySelector('.main-nav').dataset.offsetTop = document.querySelector('.main-nav').offsetTop;
             }
             $(document).ready(function() {
                 $('.main-nav').closest('div').height($('.main-nav').height());
